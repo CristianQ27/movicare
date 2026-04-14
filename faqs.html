@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Preguntas Frecuentes | Movicare</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error": "#ba1a1a",
+              "surface-tint": "#1e686f",
+              "on-primary-container": "#8bced5",
+              "tertiary": "#243d3f",
+              "on-primary-fixed": "#002023",
+              "inverse-primary": "#8ed2d9",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#fdc482",
+              "on-tertiary-fixed": "#051f21",
+              "on-primary-fixed-variant": "#004f55",
+              "on-tertiary-fixed-variant": "#324b4d",
+              "primary": "#004045",
+              "on-surface-variant": "#3f484a",
+              "on-secondary-fixed-variant": "#643e06",
+              "inverse-on-surface": "#f0f1f0",
+              "inverse-surface": "#2e3131",
+              "primary-fixed": "#aaeef6",
+              "surface-bright": "#f9f9f9",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed": "#2b1700",
+              "surface-container-high": "#e7e8e8",
+              "on-primary": "#ffffff",
+              "surface-container": "#edeeee",
+              "on-background": "#1a1c1c",
+              "on-surface": "#1a1c1c",
+              "on-secondary-container": "#784f18",
+              "on-error": "#ffffff",
+              "surface-variant": "#e2e3e2",
+              "surface-container-low": "#f3f4f3",
+              "secondary-fixed-dim": "#f4bc7a",
+              "on-error-container": "#93000a",
+              "outline-variant": "#bfc8c9",
+              "secondary-fixed": "#ffddb9",
+              "surface-dim": "#d9dada",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#80561e",
+              "surface": "#f9f9f9",
+              "on-tertiary-container": "#acc7c9",
+              "tertiary-container": "#3b5456",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed-dim": "#b1cbce",
+              "tertiary-fixed": "#cce8ea",
+              "primary-container": "#025960",
+              "surface-container-highest": "#e2e3e2",
+              "background": "#f9f9f9",
+              "outline": "#6f797a",
+              "primary-fixed-dim": "#8ed2d9"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .faq-accordion:hover .faq-icon {
+        color: #E1AB6B;
+      }
+      .glass-effect {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto w-full">
+<div class="text-2xl font-bold text-[#025960] dark:text-teal-500 font-headline">Movicare</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="index.html">Inicio</a>
+<a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="index.html">Quiénes somos</a>
+<a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="tienda.html">Tienda</a>
+<a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="contacto.html">Contacto</a>
+<a class="font-manrope text-sm font-semibold tracking-tight text-[#025960] border-b-2 border-[#E1AB6B] pb-1" href="faqs.html">FAQs</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container-high rounded-full px-4 py-1.5">
+<span class="material-symbols-outlined text-outline text-lg" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-32 font-label" placeholder="Buscar..." type="text"/>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#025960] cursor-pointer active:scale-95 transition-transform" data-icon="shopping_cart">shopping_cart</span>
+<span class="material-symbols-outlined text-[#025960] cursor-pointer active:scale-95 transition-transform" data-icon="person">person</span>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-b from-slate-100 to-transparent dark:from-slate-800 h-[1px]"></div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-5xl mx-auto">
+<!-- Hero Header -->
+<header class="mb-16 text-center md:text-left relative">
+<div class="absolute -top-12 -left-12 w-48 h-48 bg-secondary-container/20 rounded-full blur-3xl -z-10"></div>
+<h1 class="font-headline text-5xl md:text-6xl font-extrabold text-primary mb-6 tracking-tight">Preguntas Frecuentes</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl leading-relaxed">
+                En Movicare estamos para apoyarte en tu camino hacia el bienestar. Encuentra respuestas rápidas sobre nuestros servicios, productos ortopédicos y procesos de entrega.
+            </p>
+</header>
+<!-- Bento FAQ Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Main FAQ Accordion Column -->
+<div class="md:col-span-8 space-y-4">
+<!-- FAQ Item 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 transition-all duration-300 hover:shadow-md border border-outline-variant/10 group">
+<details class="group/accordion" open="">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<h3 class="font-headline text-lg font-bold text-primary">¿Cuál es el tiempo de entrega?</h3>
+<span class="material-symbols-outlined text-secondary transition-transform group-open/accordion:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="mt-4 text-on-surface-variant leading-relaxed font-body border-t border-surface-variant/50 pt-4">
+                            Contamos con entrega <span class="text-secondary font-semibold">inmediata</span> para productos en existencia en nuestra tienda. Para artículos que no se encuentren en stock, el tiempo estimado de entrega es de <span class="text-secondary font-semibold">2 días hábiles</span>.
+                        </div>
+</details>
+</div>
+<!-- FAQ Item 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 transition-all duration-300 hover:shadow-md border border-outline-variant/10">
+<details class="group/accordion">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<h3 class="font-headline text-lg font-bold text-primary">¿Dónde están ubicados?</h3>
+<span class="material-symbols-outlined text-secondary transition-transform group-open/accordion:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="mt-4 text-on-surface-variant leading-relaxed font-body border-t border-surface-variant/50 pt-4">
+                            Nuestra sede principal se encuentra en: <br/>
+<span class="text-tertiary font-medium">C/27 oeste Terrazas I De Las Praderas</span>. <br/>
+                            Contamos con facilidades de acceso y parqueo para tu comodidad.
+                        </div>
+</details>
+</div>
+<!-- FAQ Item 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 transition-all duration-300 hover:shadow-md border border-outline-variant/10">
+<details class="group/accordion">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<h3 class="font-headline text-lg font-bold text-primary">¿Cuáles son los métodos de pago?</h3>
+<span class="material-symbols-outlined text-secondary transition-transform group-open/accordion:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="mt-4 text-on-surface-variant leading-relaxed font-body border-t border-surface-variant/50 pt-4">
+                            Ofrecemos múltiples opciones para tu conveniencia:
+                            <ul class="mt-2 space-y-2">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                    Tarjetas de Crédito y Débito
+                                </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                    Transferencias Bancarias
+                                </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                    Efectivo
+                                </li>
+</ul>
+</div>
+</details>
+</div>
+<!-- FAQ Item 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 transition-all duration-300 hover:shadow-md border border-outline-variant/10">
+<details class="group/accordion">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<h3 class="font-headline text-lg font-bold text-primary">¿Cuál es el horario de atención?</h3>
+<span class="material-symbols-outlined text-secondary transition-transform group-open/accordion:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="mt-4 text-on-surface-variant leading-relaxed font-body border-t border-surface-variant/50 pt-4">
+                            Estamos disponibles para atenderte en el siguiente horario:
+                            <div class="mt-3 grid grid-cols-2 gap-4 text-sm bg-surface-container-low p-4 rounded-lg">
+<div>
+<p class="font-bold text-primary">Lunes a Viernes</p>
+<p>8:00 AM - 6:00 PM</p>
+</div>
+<div>
+<p class="font-bold text-primary">Sábados</p>
+<p>9:00 AM - 1:00 PM</p>
+</div>
+</div>
+</div>
+</details>
+</div>
+</div>
+<!-- Sidebar Support Info -->
+<aside class="md:col-span-4 space-y-6">
+<!-- Info Card -->
+<div class="bg-primary p-8 rounded-2xl text-on-primary relative overflow-hidden">
+<div class="absolute -right-10 -bottom-10 opacity-10">
+<span class="material-symbols-outlined text-9xl" data-icon="medical_services">medical_services</span>
+</div>
+<h4 class="font-headline text-2xl font-bold mb-4">¿Necesitas ayuda personalizada?</h4>
+<p class="font-body text-sm text-on-primary/80 mb-6 leading-relaxed">Nuestro equipo de especialistas en ortopedia está listo para asesorarte en la elección del equipo adecuado.</p>
+<button class="w-full bg-secondary text-on-secondary font-bold py-3 rounded-lg hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+                        Contactar Soporte
+                    </button>
+</div>
+<!-- Image Card -->
+<div class="rounded-2xl overflow-hidden shadow-lg h-64 relative group">
+<img alt="Interior de tienda ortopédica" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="high-end minimalist orthopedic boutique showroom with soft warm lighting and neatly organized clinical supplies on wooden shelves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg8PYVVeZqn5nxzSV8ijF2F1iQYj-3NxEMbkf8SBSoTgodcDpD5LcddHc5TR76xYBPLGwFaxVhBJXVCxI09WavuGUvZXGyTMa_SJYDxKgMH4MnxZFAHxrdt7Gb3MMhWd9Exzyf1A0MfWUNgHmmeyzk3-7DqEhJNfKlhTVlCPTzl4ZFuLFaFspo225jm0b5KDPE-WefNwH2LbQdbj10v5FZx9GpbLcNGX595w0k8Czsz_M0_0HRg6DN5SVATZOke5qcmzWJF4X0CXs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+<p class="text-white font-headline font-bold">Visítanos hoy</p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Floating WhatsApp Button -->
+<a class="fixed bottom-24 right-6 md:bottom-8 md:right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-90 transition-all flex items-center justify-center group" href="https://wa.me/#">
+<span class="material-symbols-outlined text-3xl" data-icon="chat" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 font-bold whitespace-nowrap">WhatsApp</span>
+</a>
+<!-- Footer -->
+<footer class="w-full pt-16 pb-8 bg-[#025960] dark:bg-slate-950 text-white mt-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-screen-2xl mx-auto w-full">
+<div class="md:col-span-1">
+<div class="text-3xl font-manrope font-black text-white mb-6">Movicare</div>
+<p class="text-slate-200/80 font-inter text-sm leading-relaxed mb-6">Expertos en suministros ortopédicos diseñados para mejorar tu calidad de vida y movilidad diaria.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-2xl hover:text-[#E1AB6B] cursor-pointer" data-icon="share">share</span>
+<span class="material-symbols-outlined text-2xl hover:text-[#E1AB6B] cursor-pointer" data-icon="location_on">location_on</span>
+</div>
+</div>
+<div class="space-y-4">
+<h5 class="font-headline font-bold text-lg text-[#E1AB6B]">Navegación</h5>
+<ul class="space-y-3">
+<li><a class="text-slate-200/80 hover:text-white transition-all font-inter text-sm" href="index.html">Inicio</a></li>
+<li><a class="text-slate-200/80 hover:text-white transition-all font-inter text-sm" href="index.html">Quiénes somos</a></li>
+<li><a class="text-slate-200/80 hover:text-white transition-all font-inter text-sm" href="tienda.html">Tienda</a></li>
+<li><a class="text-[#E1AB6B] font-bold font-inter text-sm" href="faqs.html">FAQs</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-headline font-bold text-lg text-[#E1AB6B]">Legal</h5>
+<ul class="space-y-3">
+<li><a class="text-slate-200/80 hover:text-white transition-all font-inter text-sm" href="privacidad.html">Privacidad</a></li>
+<li><a class="text-slate-200/80 hover:text-white transition-all font-inter text-sm" href="index.html">Términos</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-headline font-bold text-lg text-[#E1AB6B]">Contacto</h5>
+<p class="text-slate-200/80 font-inter text-sm leading-relaxed">
+                    C/27 oeste Terrazas I De Las Praderas<br/>
+                    Santo Domingo, RD<br/>
+                    info@movicare.com
+                </p>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto px-8 mt-16 pt-8 border-t border-white/10">
+<p class="text-slate-400 text-xs text-center">© 2024 Movicare Orthopedic Supplies. Todos los derechos reservados.</p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-2 bg-white dark:bg-slate-950 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] rounded-t-2xl z-50">
+<div class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-inter text-[10px] font-medium">Inicio</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-inter text-[10px] font-medium">Tienda</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[10px] font-medium">Cuenta</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="font-inter text-[10px] font-medium">Contacto</span>
+</div>
+</nav>
+</body></html>

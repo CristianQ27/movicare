@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Movicare | Tienda de Ortopedia Premium</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error": "#ba1a1a",
+              "surface-tint": "#1e686f",
+              "on-primary-container": "#8bced5",
+              "tertiary": "#243d3f",
+              "on-primary-fixed": "#002023",
+              "inverse-primary": "#8ed2d9",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#fdc482",
+              "on-tertiary-fixed": "#051f21",
+              "on-primary-fixed-variant": "#004f55",
+              "on-tertiary-fixed-variant": "#324b4d",
+              "primary": "#004045",
+              "on-surface-variant": "#3f484a",
+              "on-secondary-fixed-variant": "#643e06",
+              "inverse-on-surface": "#f0f1f0",
+              "inverse-surface": "#2e3131",
+              "primary-fixed": "#aaeef6",
+              "surface-bright": "#f9f9f9",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed": "#2b1700",
+              "surface-container-high": "#e7e8e8",
+              "on-primary": "#ffffff",
+              "surface-container": "#edeeee",
+              "on-background": "#1a1c1c",
+              "on-surface": "#1a1c1c",
+              "on-secondary-container": "#784f18",
+              "on-error": "#ffffff",
+              "surface-variant": "#e2e3e2",
+              "surface-container-low": "#f3f4f3",
+              "secondary-fixed-dim": "#f4bc7a",
+              "on-error-container": "#93000a",
+              "outline-variant": "#bfc8c9",
+              "secondary-fixed": "#ffddb9",
+              "surface-dim": "#d9dada",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#80561e",
+              "surface": "#f9f9f9",
+              "on-tertiary-container": "#acc7c9",
+              "tertiary-container": "#3b5456",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed-dim": "#b1cbce",
+              "tertiary-fixed": "#cce8ea",
+              "primary-container": "#025960",
+              "surface-container-highest": "#e2e3e2",
+              "background": "#f9f9f9",
+              "outline": "#6f797a",
+              "primary-fixed-dim": "#8ed2d9"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopNavBar -->
+<header class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-md fixed top-0 w-full z-50 shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto w-full">
+<a class="text-2xl font-bold text-[#025960] dark:text-teal-500 font-headline" href="index.html">Movicare</a>
+<nav class="hidden md:flex items-center space-x-8 font-manrope text-sm font-semibold tracking-tight">
+<a class="text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="index.html">Inicio</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="quienes_somos.html">Quiénes somos</a>
+<a class="text-[#025960] border-b-2 border-[#E1AB6B] pb-1" href="tienda.html">Tienda</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="contacto.html">Contacto</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="faqs.html">FAQs</a>
+</nav>
+<div class="flex items-center space-x-5">
+<button class="text-slate-600 hover:text-[#025960] transition-colors relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute -top-2 -right-2 bg-secondary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">3</span>
+</button>
+<button class="text-slate-600 hover:text-[#025960] transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="text-slate-600 hover:text-[#025960] transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+<div class="bg-gradient-to-b from-slate-100 to-transparent dark:from-slate-800 h-[1px]"></div>
+</header>
+<main class="pt-24 pb-20 px-4 md:px-8 max-w-screen-2xl mx-auto">
+<!-- Header Section -->
+<div class="mb-12">
+<h1 class="font-headline text-4xl md:text-5xl font-extrabold text-primary tracking-tight mb-4">Catálogo de Movilidad</h1>
+<p class="text-on-surface-variant max-w-2xl text-lg">Soluciones ortopédicas de alta precisión diseñadas para devolverte la libertad de movimiento con el máximo confort.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<!-- Sidebar: Categories -->
+<aside class="lg:col-span-3 sticky top-28 space-y-8">
+<div class="bg-surface-container-low p-6 rounded-xl">
+<h3 class="font-headline text-primary font-bold mb-6 text-xl">Categorías</h3>
+<ul class="space-y-4">
+<li>
+<button class="flex items-center justify-between w-full group py-2 text-on-surface hover:text-secondary transition-colors">
+<span class="font-medium">Braces (Soportes)</span>
+<span class="material-symbols-outlined text-sm opacity-50 group-hover:opacity-100">chevron_right</span>
+</button>
+</li>
+<li>
+<button class="flex items-center justify-between w-full group py-2 text-on-surface hover:text-secondary transition-colors">
+<span class="font-medium">Movilidad Avanzada</span>
+<span class="material-symbols-outlined text-sm opacity-50 group-hover:opacity-100">chevron_right</span>
+</button>
+</li>
+<li>
+<button class="flex items-center justify-between w-full group py-2 text-on-surface hover:text-secondary transition-colors">
+<span class="font-medium">Compresión Médica</span>
+<span class="material-symbols-outlined text-sm opacity-50 group-hover:opacity-100">chevron_right</span>
+</button>
+</li>
+<li>
+<button class="flex items-center justify-between w-full group py-2 text-on-surface hover:text-secondary transition-colors">
+<span class="font-medium">Recuperación Post-Op</span>
+<span class="material-symbols-outlined text-sm opacity-50 group-hover:opacity-100">chevron_right</span>
+</button>
+</li>
+</ul>
+</div>
+<!-- Trust Badges -->
+<div class="space-y-4 px-2">
+<div class="flex items-center space-x-4">
+<div class="bg-secondary-fixed-dim/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<p class="text-sm font-bold text-primary">Verified Quality</p>
+<p class="text-xs text-on-surface-variant leading-tight">Certificación médica internacional.</p>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<div class="bg-primary/5 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<div>
+<p class="text-sm font-bold text-primary">Secure Payment</p>
+<p class="text-xs text-on-surface-variant leading-tight">Transacciones cifradas SSL.</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<section class="lg:col-span-9">
+<!-- Filters/Sorting -->
+<div class="flex flex-wrap items-center justify-between mb-8 gap-4 bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/10 shadow-sm">
+<span class="text-sm text-on-surface-variant">Mostrando <span class="font-bold text-on-surface">12 de 48</span> productos</span>
+<div class="flex items-center space-x-3">
+<label class="text-sm font-medium">Ordenar por:</label>
+<select class="bg-surface-container-high border-none rounded-lg text-sm focus:ring-2 focus:ring-primary/20 cursor-pointer">
+<option>Destacados</option>
+<option>Precio: Menor a Mayor</option>
+<option>Precio: Mayor a Menor</option>
+<option>Más recientes</option>
+</select>
+</div>
+</div>
+<!-- Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Product Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow group overflow-hidden border border-outline-variant/10">
+<div class="relative h-64 overflow-hidden bg-slate-100">
+<img alt="Knee Brace" class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="Modern high-tech carbon fiber knee brace for medical recovery on a clean white background with professional studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdagQNt4HX5x5T4Vwm-EYoWvmP6Q2dyBF-Zm09REgJG9Q4oi6fLjD2Sof-FtMwadK0rlOkVxSjVNn686F6WMYHf0NxXpryP7ZNwfOYf4qGEZgzsM0rYsS5KhTqM1WN5ZhLdlILc1f96vuz9ymATxbpFxJzcFqjlnwvh8UhPpfTazjBLRSsKEQk_Cd6tJLD0spj-_dx-AOZVGoZwVE9t_sb6VLYpLGji-pR6xT5dMF1n6E5pwI0YJxg8NjM24cx9fmbmGLz5_5ex30"/>
+<span class="absolute top-4 left-4 bg-secondary text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Nuevo</span>
+</div>
+<div class="p-6">
+<div class="flex items-center space-x-1 mb-2">
+<span class="material-symbols-outlined text-xs text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-semibold text-on-surface-variant">4.9 (124 reviews)</span>
+</div>
+<h4 class="font-headline font-bold text-lg text-primary mb-1">Rodillera Articulada Genuflex Pro</h4>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-4">Estabilización lateral máxima con bisagras policéntricas para ligamentos cruzados.</p>
+<div class="flex items-center justify-between mb-6">
+<span class="text-2xl font-extrabold text-primary">$124.99</span>
+<span class="text-[10px] flex items-center text-emerald-600 font-bold bg-emerald-50 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px] mr-1">check_circle</span>
+                                    Stock disponible
+                                </span>
+</div>
+<button class="w-full py-3 bg-[#E1AB6B] text-white font-bold rounded-lg hover:brightness-105 active:scale-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+                                Añadir al carrito
+                            </button>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow group overflow-hidden border border-outline-variant/10">
+<div class="relative h-64 overflow-hidden bg-slate-100">
+<img alt="Mobility Aid" class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="Ergonomic medical crutches with anatomical grips leaning against a minimalist architectural wall in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFHnlO8SwJYYGvHajPE4k1kzwmkTOgpkvvpF2Hgg94OJiCMHT8-kGwZNNrUJCDgS3FZbkaGa8FLYFw77BiFs191tgeS-A_OYflRc9wyG0EkPYoRKn-vWmi7de7_RvY4J3dPMBLlS_--BaU1b0cf_JIVyMW9VTt1BY3fhH4tGlkhqbH9GzA7hz0a8Mp04vI04isLB9lRlAg7m_I8g9ucuemE4R2XgexsJEwsSczJqJFc1VixrALb070Pt-dZ0eu2t3B896zwfMXsic"/>
+</div>
+<div class="p-6">
+<div class="flex items-center space-x-1 mb-2">
+<span class="material-symbols-outlined text-xs text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-semibold text-on-surface-variant">4.7 (89 reviews)</span>
+</div>
+<h4 class="font-headline font-bold text-lg text-primary mb-1">Muletas Anatómicas LiteStep</h4>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-4">Diseño ultra-ligero de aluminio con empuñaduras de gel para evitar fatiga.</p>
+<div class="flex items-center justify-between mb-6">
+<span class="text-2xl font-extrabold text-primary">$68.00</span>
+<span class="text-[10px] flex items-center text-amber-600 font-bold bg-amber-50 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px] mr-1">schedule</span>
+                                    2 días para entrega
+                                </span>
+</div>
+<button class="w-full py-3 bg-[#E1AB6B] text-white font-bold rounded-lg hover:brightness-105 active:scale-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+                                Añadir al carrito
+                            </button>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow group overflow-hidden border border-outline-variant/10">
+<div class="relative h-64 overflow-hidden bg-slate-100">
+<img alt="Compression Wear" class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="Professional sports compression socks displayed on a stylized leg mannequin in a bright wellness boutique setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqpbo394mT7kEVw-rI2ybr_jLBCJJW6GB0kxt5Z6Q-CF6vfuNPzRUVOQyEjfTjJR19Znj6n1hE4qDSWQoV4WHfzmdQQlZTwmWTt_cKgS0Xg8flbLFisxO6gcF6NRIuFf1TiQuA0mp56lz_lulCQcvwmDrRftV-4rCVsVsfqCHG-HPSwWiLIVPAAlWWNhKcdheFBXbb4yypgeMIA8-_YoXiem1KkjUljYUxE1eN70CE4bVJ2GFCy_lHmi_nQiIEHsA1ok6lFFY609I"/>
+</div>
+<div class="p-6">
+<div class="flex items-center space-x-1 mb-2">
+<span class="material-symbols-outlined text-xs text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-semibold text-on-surface-variant">5.0 (56 reviews)</span>
+</div>
+<h4 class="font-headline font-bold text-lg text-primary mb-1">Medias Compresión Elite 20-30</h4>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-4">Compresión graduada premium para circulación mejorada y reducción de edemas.</p>
+<div class="flex items-center justify-between mb-6">
+<span class="text-2xl font-extrabold text-primary">$45.50</span>
+<span class="text-[10px] flex items-center text-emerald-600 font-bold bg-emerald-50 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px] mr-1">check_circle</span>
+                                    Stock disponible
+                                </span>
+</div>
+<button class="w-full py-3 bg-[#E1AB6B] text-white font-bold rounded-lg hover:brightness-105 active:scale-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+                                Añadir al carrito
+                            </button>
+</div>
+</article>
+<!-- Product Card 4 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow group overflow-hidden border border-outline-variant/10">
+<div class="relative h-64 overflow-hidden bg-slate-100">
+<img alt="Back Support" class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="Ergonomic back support brace for posture correction on a light grey textured background with artistic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfbYEzv7USD6stw2ekErYNlSOveMZ-Xf1t2YdaP8vDJC4wyLwNr2Hax6I_bXudlhbS85WS1j_ZbsOZ1rmyLCGqPkg5qXaZClVnFjXR9CySwEgjCwC-fUsurmz5yLOEXu8RCO2b04L2ejZyvb3LZc3I_jG5nU6ff4_Ioa7Mdbe4gHAMVwZ_TXKiKM-VwjOE1RH6VF-O7hyfECvtzPcyRz5v1AuzJCWXs8Fiu8l96mjkv6vpQsNDHPPrMXxHAlfjb3RP-hAe_1jLz10"/>
+</div>
+<div class="p-6">
+<div class="flex items-center space-x-1 mb-2">
+<span class="material-symbols-outlined text-xs text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-semibold text-on-surface-variant">4.8 (210 reviews)</span>
+</div>
+<h4 class="font-headline font-bold text-lg text-primary mb-1">Soporte Lumbar AirActive</h4>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-4">Faja lumbar con paneles de ventilación 3D para uso prolongado diario.</p>
+<div class="flex items-center justify-between mb-6">
+<span class="text-2xl font-extrabold text-primary">$89.00</span>
+<span class="text-[10px] flex items-center text-emerald-600 font-bold bg-emerald-50 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px] mr-1">check_circle</span>
+                                    Stock disponible
+                                </span>
+</div>
+<button class="w-full py-3 bg-[#E1AB6B] text-white font-bold rounded-lg hover:brightness-105 active:scale-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+                                Añadir al carrito
+                            </button>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="mt-12 flex justify-center items-center space-x-2">
+<button class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center hover:bg-surface-container-high transition-colors text-primary">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center font-bold">1</button>
+<button class="w-10 h-10 rounded-lg bg-white border border-outline-variant/30 flex items-center justify-center hover:bg-surface-container-low transition-colors">2</button>
+<button class="w-10 h-10 rounded-lg bg-white border border-outline-variant/30 flex items-center justify-center hover:bg-surface-container-low transition-colors">3</button>
+<button class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center hover:bg-surface-container-high transition-colors text-primary">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- Floating WhatsApp -->
+<a class="fixed bottom-24 md:bottom-8 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-90 transition-all z-40 group" href="index.html">
+<svg class="w-8 h-8 fill-current" viewbox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.185-.573c.948.517 2.094.887 3.144.887 3.181 0 5.767-2.586 5.767-5.766 0-3.18-2.587-5.769-5.765-5.769zm3.387 8.192c-.125.349-.714.657-1.021.696-.282.035-.64.062-1.03-.092-.258-.101-.58-.224-1.02-.408-1.874-.783-3.102-2.691-3.196-2.816-.094-.125-.768-.921-.768-1.758 0-.837.439-1.248.595-1.423.156-.175.34-.219.453-.219.113 0 .226 0 .324.005.102.005.239-.039.375.286.136.326.467 1.137.508 1.223.041.086.068.186.011.298-.057.113-.086.184-.171.284-.085.101-.179.225-.255.303-.085.086-.174.179-.075.348.099.169.44 0 .942.448.388.345.714.752.83.916.117.164.13.284.074.395-.056.111-.248.286-.349.4-.102.114-.204.19-.345.08-.141-.111-1.011-.372-1.926-1.188a7.17 7.17 0 0 1-1.332-1.657c-.113-.19.099-.176.283-.541.05-.101.025-.19-.012-.266-.038-.076-.341-.822-.468-1.126-.123-.296-.248-.256-.341-.261-.088-.004-.189-.005-.291-.005-.102 0-.267.038-.407.19-.14.152-.533.521-.533 1.27s.545 1.477.621 1.579c.076.101 1.073 1.638 2.599 2.296.363.157.647.251.868.321.365.116.697.099.96.06.293-.043.901-.369 1.026-.726zM12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z"></path></svg>
+<span class="absolute right-16 bg-white text-primary text-xs font-bold py-2 px-4 rounded-lg shadow-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">¿Necesitas asesoría médica?</span>
+</a>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-2 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50">
+<a class="flex flex-col items-center justify-center text-slate-400" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-inter text-[10px] font-medium">Inicio</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#025960]/10 text-[#025960] rounded-xl px-3 py-1" href="index.html">
+<span class="material-symbols-outlined">storefront</span>
+<span class="font-inter text-[10px] font-medium">Tienda</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400" href="index.html">
+<span class="material-symbols-outlined">person</span>
+<span class="font-inter text-[10px] font-medium">Cuenta</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400" href="index.html">
+<span class="material-symbols-outlined">chat</span>
+<span class="font-inter text-[10px] font-medium">Contacto</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="bg-[#025960] dark:bg-slate-950 w-full pt-16 pb-24 md:pb-8 text-white">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-screen-2xl mx-auto w-full">
+<div class="space-y-6">
+<span class="text-3xl font-manrope font-black text-white">Movicare</span>
+<p class="text-slate-200/80 text-sm leading-relaxed">Expertos en suministros ortopédicos de alta gama. Comprometidos con tu recuperación y bienestar integral.</p>
+<div class="flex space-x-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary transition-colors">social_leaderboard</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary transition-colors">share_reviews</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary transition-colors">camera</span>
+</div>
+</div>
+<div>
+<h4 class="font-headline font-bold mb-6">Navegación</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-all inline-block" href="index.html">Inicio</a></li>
+<li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-all inline-block" href="quienes_somos.html">Quiénes somos</a></li>
+<li><a class="text-[#E1AB6B] font-bold" href="tienda.html">Tienda</a></li>
+<li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-all inline-block" href="faqs.html">FAQs</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline font-bold mb-6">Asistencia</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-all inline-block" href="contacto.html">Contacto</a></li>
+<li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-all inline-block" href="privacidad.html">Privacidad</a></li>
+<li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-all inline-block" href="terminos_condiciones.html">Términos</a></li>
+<li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-all inline-block" href="index.html">Envíos</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline font-bold mb-6">Newsletter</h4>
+<p class="text-slate-200/80 text-xs mb-4 leading-relaxed">Suscríbete para recibir consejos de salud y ofertas exclusivas.</p>
+<div class="flex">
+<input class="bg-white/10 border-none rounded-l-lg text-sm w-full focus:ring-1 focus:ring-secondary placeholder:text-slate-400" placeholder="Email" type="email"/>
+<button class="bg-[#E1AB6B] px-4 rounded-r-lg hover:brightness-110">
+<span class="material-symbols-outlined text-white">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto px-8 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-200/60 text-xs">© 2024 Movicare Orthopedic Supplies. Todos los derechos reservados.</p>
+<div class="flex items-center space-x-6">
+<span class="material-symbols-outlined text-slate-200/60">payments</span>
+<span class="material-symbols-outlined text-slate-200/60">credit_card</span>
+<span class="material-symbols-outlined text-slate-200/60">account_balance</span>
+</div>
+</div>
+</footer>
+</body></html>
