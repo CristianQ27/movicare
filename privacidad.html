@@ -3,10 +3,11 @@
 <html class="light" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Política de Privacidad | Movicare</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -62,41 +63,43 @@
               "primary-fixed-dim": "#8ed2d9"
             },
             fontFamily: {
-              "headline": ["Manrope"],
-              "body": ["Inter"],
-              "label": ["Inter"]
+              "headline": ["Manrope", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
             },
             borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
           },
         },
       }
     </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-surface text-on-surface antialiased;
+            }
         }
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
     </style>
 </head>
-<body class="bg-surface text-on-surface">
+<body class="bg-surface font-body text-on-surface">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm">
+<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm transition-all duration-300">
 <div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto w-full">
-<div class="text-2xl font-bold text-[#025960] dark:text-teal-500 font-headline">Movicare</div>
-<div class="hidden md:flex items-center space-x-8 font-manrope text-sm font-semibold tracking-tight">
-<a class="text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="index.html">Inicio</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="index.html">Quiénes somos</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="tienda.html">Tienda</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="contacto.html">Contacto</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="faqs.html">FAQs</a>
+<a class="flex items-center" href="index.html">
+    <img src="logo.svg" alt="Movicare Logo" class="h-10 w-auto">
+</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-headline text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="index.html">Inicio</a>
+<a class="font-headline text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="quienes_somos.html">Quiénes somos</a>
+<a class="font-headline text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="tienda.html">Tienda</a>
+<a class="font-headline text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="contacto.html">Contacto</a>
+<a class="font-headline text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="faqs.html">FAQs</a>
 </div>
 <div class="flex items-center space-x-5 text-[#025960] dark:text-teal-400">
-<button class="active:scale-95 transition-transform"><span class="material-symbols-outlined" data-icon="search">search</span></button>
-<button class="active:scale-95 transition-transform"><span class="material-symbols-outlined" data-icon="person">person</span></button>
+<button class="active:scale-95 transition-transform"><i data-lucide="search" class="w-5 h-5"></i></button>
+<button class="active:scale-95 transition-transform"><i data-lucide="user" class="w-5 h-5"></i></button>
 <button class="active:scale-95 transition-transform relative">
-<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
-<span class="absolute -top-1 -right-1 bg-secondary text-on-secondary text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+<i data-lucide="shopping-cart" class="w-5 h-5"></i>
+<span class="absolute -top-1 -right-1 bg-secondary text-on-secondary text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-body">0</span>
 </button>
 </div>
 </div>
@@ -104,70 +107,70 @@
 </nav>
 <main class="pt-32 pb-24 px-6 md:px-12 max-w-4xl mx-auto">
 <!-- Header Section -->
-<header class="mb-16">
-<h1 class="text-4xl md:text-5xl font-extrabold text-primary mb-6 tracking-tight">Política de Privacidad</h1>
-<p class="text-lg text-on-surface-variant leading-relaxed">
-                En <span class="font-bold text-primary">Movicare</span> respetamos su privacidad y estamos comprometidos a proteger sus datos personales. Esta política detalla cómo manejamos su información para brindarle la mejor experiencia en suministros ortopédicos.
+<header class="mb-16" data-aos="fade-up">
+<h1 class="font-headline text-4xl md:text-5xl font-extrabold text-primary mb-6 tracking-tight">Política de Privacidad</h1>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed">
+                En <span class="font-body font-bold text-primary">Movicare</span> respetamos su privacidad y estamos comprometidos a proteger sus datos personales. Esta política detalla cómo manejamos su información para brindarle la mejor experiencia en suministros ortopédicos.
             </p>
 </header>
 <!-- Content Sections -->
 <div class="space-y-12">
-<section class="bg-surface-container-low p-8 rounded-xl border-l-4 border-secondary">
-<h2 class="text-2xl font-bold text-primary mb-4 flex items-center gap-3">
-<span class="material-symbols-outlined">data_object</span>
+<section class="bg-surface-container-low p-8 rounded-xl border-l-4 border-secondary" data-aos="fade-up">
+<h2 class="font-headline text-2xl font-bold text-primary mb-4 flex items-center gap-3">
+<i data-lucide="database" class="w-6 h-6"></i>
                     1. Información que recopilamos
                 </h2>
-<p class="text-on-surface-variant leading-relaxed">
+<p class="font-body text-on-surface-variant leading-relaxed">
                     Recopilamos información necesaria para el procesamiento de pedidos y la mejora de nuestros servicios de salud. Esto incluye datos identificativos como nombre, dirección de envío, correo electrónico y detalles técnicos de movilidad relacionados con el equipo solicitado.
                 </p>
 </section>
-<section class="p-4">
-<h2 class="text-2xl font-bold text-primary mb-4 flex items-center gap-3">
-<span class="material-symbols-outlined">verified_user</span>
+<section class="p-4" data-aos="fade-up">
+<h2 class="font-headline text-2xl font-bold text-primary mb-4 flex items-center gap-3">
+<i data-lucide="shield-check" class="w-6 h-6"></i>
                     2. Finalidad del uso de los datos
                 </h2>
 <div class="grid md:grid-cols-2 gap-6 mt-6">
 <div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm">
-<h3 class="font-bold text-tertiary mb-2">Gestión de Pedidos</h3>
-<p class="text-sm text-on-surface-variant">Procesamiento de compras, facturación y logística de entrega de equipos ortopédicos.</p>
+<h3 class="font-headline font-bold text-tertiary mb-2">Gestión de Pedidos</h3>
+<p class="font-body text-sm text-on-surface-variant">Procesamiento de compras, facturación y logística de entrega de equipos ortopédicos.</p>
 </div>
 <div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm">
-<h3 class="font-bold text-tertiary mb-2">Asesoría Técnica</h3>
-<p class="text-sm text-on-surface-variant">Personalización de productos basados en sus necesidades físicas específicas.</p>
+<h3 class="font-headline font-bold text-tertiary mb-2">Asesoría Técnica</h3>
+<p class="font-body text-sm text-on-surface-variant">Personalización de productos basados en sus necesidades físicas específicas.</p>
 </div>
 </div>
 </section>
-<section class="bg-primary/5 p-8 rounded-xl">
-<h2 class="text-2xl font-bold text-primary mb-4 flex items-center gap-3">
-<span class="material-symbols-outlined">security</span>
+<section class="bg-primary/5 p-8 rounded-xl" data-aos="fade-up">
+<h2 class="font-headline text-2xl font-bold text-primary mb-4 flex items-center gap-3">
+<i data-lucide="shield" class="w-6 h-6"></i>
                     Compromiso de Seguridad
                 </h2>
-<p class="text-on-surface-variant leading-relaxed mb-4">
+<p class="font-body text-on-surface-variant leading-relaxed mb-4">
                     Implementamos protocolos de cifrado de nivel clínico para asegurar que su historial de compras y datos personales permanezcan confidenciales. No compartimos su información con terceros para fines publicitarios sin su consentimiento explícito.
                 </p>
-<div class="flex items-center gap-4 text-primary font-medium text-sm">
-<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">shield</span>
+<div class="flex items-center gap-4 text-primary font-medium text-sm font-body">
+<i data-lucide="shield" class="w-4 h-4 text-secondary fill-current"></i>
                     Cifrado SSL de 256 bits
-                    <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">gpp_good</span>
+                    <i data-lucide="shield-check" class="w-4 h-4 text-secondary fill-current"></i>
                     Protección de datos RGPD
                 </div>
 </section>
-<section class="border-t border-surface-container-high pt-12">
-<h2 class="text-2xl font-bold text-primary mb-4 flex items-center gap-3">
-<span class="material-symbols-outlined">contact_support</span>
+<section class="border-t border-surface-container-high pt-12" data-aos="fade-up">
+<h2 class="font-headline text-2xl font-bold text-primary mb-4 flex items-center gap-3">
+<i data-lucide="help-circle" class="w-6 h-6"></i>
                     9. Contacto
                 </h2>
-<p class="text-on-surface-variant mb-8">Si tiene alguna duda sobre nuestra política o el tratamiento de sus datos, no dude en contactar a nuestro oficial de privacidad:</p>
-<div class="flex flex-col md:flex-row gap-4">
+<p class="font-body text-on-surface-variant mb-8">Si tiene alguna duda sobre nuestra política o el tratamiento de sus datos, no dude en contactar a nuestro oficial de privacidad:</p>
+<div class="flex flex-col md:flex-row gap-4 font-body">
 <a class="flex items-center gap-4 bg-surface-container-high px-6 py-4 rounded-lg hover:bg-secondary-container transition-colors group" href="mailto:info@movicarerd.com">
-<span class="material-symbols-outlined text-primary group-hover:text-on-secondary-container">mail</span>
+<i data-lucide="mail" class="w-5 h-5 text-primary group-hover:text-on-secondary-container"></i>
 <div>
 <p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Email</p>
 <p class="font-bold text-primary">info@movicarerd.com</p>
 </div>
 </a>
 <a class="flex items-center gap-4 bg-surface-container-high px-6 py-4 rounded-lg hover:bg-secondary-container transition-colors group" href="tel:8494495398">
-<span class="material-symbols-outlined text-primary group-hover:text-on-secondary-container">call</span>
+<i data-lucide="phone" class="w-5 h-5 text-primary group-hover:text-on-secondary-container"></i>
 <div>
 <p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Teléfono</p>
 <p class="font-bold text-primary">849-449-5398</p>
@@ -176,60 +179,78 @@
 </div>
 </section>
 </div>
-<div class="mt-20 pt-10 border-t border-surface-container-high text-center">
+<div class="mt-20 pt-10 border-t border-surface-container-high text-center font-body">
 <p class="text-sm text-on-surface-variant italic">Última actualización: Noviembre 2024</p>
 </div>
 </main>
-<!-- Footer -->
-<footer class="w-full pt-16 pb-8 bg-[#025960] dark:bg-slate-950 text-white">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-screen-2xl mx-auto w-full">
-<div class="space-y-4">
-<div class="text-3xl font-manrope font-black text-white">Movicare</div>
-<p class="text-slate-200/80 font-inter text-sm leading-relaxed">Expertos en soluciones de movilidad y ortopedia para una vida plena y activa.</p>
-</div>
-<div class="flex flex-col space-y-4">
-<h4 class="font-headline font-bold text-[#E1AB6B]">Enlaces Rápidos</h4>
-<a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 font-inter text-sm" href="index.html">Inicio</a>
-<a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 font-inter text-sm" href="index.html">Quiénes somos</a>
-<a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 font-inter text-sm" href="tienda.html">Tienda</a>
-<a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 font-inter text-sm" href="contacto.html">Contacto</a>
-</div>
-<div class="flex flex-col space-y-4">
-<h4 class="font-headline font-bold text-[#E1AB6B]">Legal</h4>
-<a class="text-[#E1AB6B] font-bold font-inter text-sm" href="privacidad.html">Privacidad</a>
-<a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 font-inter text-sm" href="index.html">Términos</a>
-<a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 font-inter text-sm" href="faqs.html">FAQs</a>
-</div>
-<div class="space-y-4">
-<h4 class="font-headline font-bold text-[#E1AB6B]">Newsletter</h4>
-<p class="text-xs text-slate-200/80">Recibe consejos de salud y ofertas exclusivas.</p>
-<div class="flex gap-2">
-<input class="bg-white/10 border-none rounded-lg px-3 py-2 text-sm w-full focus:ring-1 focus:ring-[#E1AB6B]" placeholder="Su email" type="email"/>
-<button class="bg-[#E1AB6B] text-primary px-4 py-2 rounded-lg font-bold hover:brightness-110 transition-all"><span class="material-symbols-outlined">send</span></button>
-</div>
-</div>
-</div>
-<div class="mt-16 text-center border-t border-white/10 pt-8 px-8">
-<p class="text-xs text-slate-400">© 2024 Movicare Orthopedic Supplies. Todos los derechos reservados.</p>
-</div>
-</footer>
+<!-- Floating WhatsApp Button -->
+<a class="fixed bottom-24 right-6 md:bottom-8 md:right-8 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all z-40" href="https://wa.me/8494495398" target="_blank">
+    <svg fill="currentColor" height="32" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.185-.573c.948.517 1.871.887 3.134.887 3.181 0 5.767-2.586 5.767-5.766 0-3.18-2.587-5.729-5.755-5.729zm3.844 8.839c-.152.427-.75.786-1.042.844-.241.05-.55.061-.865-.042-.204-.067-.476-.146-1.012-.369-1.395-.581-2.29-2.113-2.36-2.204-.07-.092-.563-.748-.563-1.428 0-.68.354-1.012.479-1.148.125-.135.271-.169.354-.169.083 0 .166 0 .249.006.088.003.204-.033.318.241.115.274.394.957.427 1.025.033.068.053.146.01.231-.042.085-.062.138-.125.212-.062.074-.131.165-.187.221-.063.063-.129.131-.056.257.073.125.324.536.696.867.48.427.883.56 1.012.624.128.062.204.053.28-.033.076-.088.324-.378.41-.508.087-.13.174-.109.294-.065.118.044.75.354.878.418.128.065.214.095.244.152.031.057.031.328-.121.755z"></path>
+    </svg>
+</a>
 <!-- BottomNavBar (Mobile Only) -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-2 bg-white dark:bg-slate-950 rounded-t-2xl z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] border-t border-slate-100 dark:border-slate-800">
-<div class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all">
-<span class="material-symbols-outlined" data-icon="home">home</span>
-<span class="font-inter text-[10px] font-medium">Inicio</span>
-</div>
-<div class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all">
-<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
-<span class="font-inter text-[10px] font-medium">Tienda</span>
-</div>
-<div class="flex flex-col items-center justify-center bg-[#025960]/10 text-[#025960] rounded-xl px-3 py-1 active:scale-90 transition-all">
-<span class="material-symbols-outlined" data-icon="person">person</span>
-<span class="font-inter text-[10px] font-medium">Cuenta</span>
-</div>
-<div class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all">
-<span class="material-symbols-outlined" data-icon="chat">chat</span>
-<span class="font-inter text-[10px] font-medium">Contacto</span>
-</div>
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-2 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50 rounded-t-2xl">
+    <a class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all" href="index.html">
+        <i data-lucide="home" class="w-5 h-5"></i>
+        <span class="font-body text-[10px] font-medium">Inicio</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all" href="tienda.html">
+        <i data-lucide="store" class="w-5 h-5"></i>
+        <span class="font-body text-[10px] font-medium">Tienda</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all" href="registro.html">
+        <i data-lucide="user" class="w-5 h-5"></i>
+        <span class="font-body text-[10px] font-medium">Cuenta</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all" href="contacto.html">
+        <i data-lucide="message-square" class="w-5 h-5"></i>
+        <span class="font-body text-[10px] font-medium">Contacto</span>
+    </a>
 </nav>
+<!-- Footer -->
+<footer class="w-full pt-16 pb-8 bg-[#025960] dark:bg-slate-950 text-white mt-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-screen-2xl mx-auto w-full font-body">
+        <div class="md:col-span-1">
+            <img src="logo.svg" alt="Movicare Logo" class="h-12 w-auto brightness-0 invert">
+            <p class="mt-4 text-slate-200/80 text-sm leading-relaxed">
+                Excelencia en insumos ortopédicos para tu bienestar y movilidad diaria. Calidad clínica con toque humano.
+            </p>
+        </div>
+        <div>
+            <h4 class="font-headline font-bold mb-6 text-[#E1AB6B]">Enlaces Rápidos</h4>
+            <ul class="space-y-4">
+                <li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="index.html">Inicio</a></li>
+                <li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="quienes_somos.html">Quiénes somos</a></li>
+                <li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="tienda.html">Tienda</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-headline font-bold mb-6 text-[#E1AB6B]">Asistencia</h4>
+            <ul class="space-y-4">
+                <li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="faqs.html">FAQs</a></li>
+                <li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="privacidad.html">Privacidad</a></li>
+                <li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="terminos_condiciones.html">Términos</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-headline font-bold mb-6 text-[#E1AB6B]">Newsletter</h4>
+            <p class="text-sm text-slate-200/80 mb-4">Suscríbete para recibir consejos de salud y ofertas exclusivas.</p>
+            <div class="flex gap-2">
+                <input class="bg-white/10 border-none rounded-lg px-4 py-2 text-white w-full text-sm focus:ring-1 focus:ring-[#E1AB6B]" placeholder="Tu correo" type="email"/>
+                <button class="bg-[#E1AB6B] text-[#025960] px-4 py-2 rounded-lg font-bold hover:bg-[#d09a5a] transition-colors">
+                    <i data-lucide="send" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="mt-16 pt-8 border-t border-white/10 text-center text-xs text-slate-200/60 font-body">
+        © 2024 Movicare Orthopedic Supplies. Todos los derechos reservados.
+    </div>
+</footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    lucide.createIcons();
+    AOS.init({ duration: 800, once: true, offset: 100 });
+</script>
 </body></html>

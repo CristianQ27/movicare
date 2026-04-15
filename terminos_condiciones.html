@@ -5,9 +5,9 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Términos y Condiciones | Movicare</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -63,40 +63,43 @@
                         "primary-fixed-dim": "#8ed2d9"
                     },
                     fontFamily: {
-                        "headline": ["Manrope"],
-                        "body": ["Inter"],
-                        "label": ["Inter"]
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
                     },
                     borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
                 },
             },
         }
     </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-surface text-on-surface antialiased;
+            }
         }
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
     </style>
 </head>
-<body class="bg-surface text-on-surface">
+<body class="bg-surface font-body text-on-surface">
 <!-- TopAppBar -->
-<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm">
+<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm transition-all duration-300">
 <div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto w-full">
-<div class="text-2xl font-bold text-[#025960] dark:text-teal-500 font-headline">Movicare</div>
+<a class="flex items-center" href="index.html">
+    <img src="logo.svg" alt="Movicare Logo" class="h-10 w-auto">
+</a>
 <div class="hidden md:flex items-center space-x-8">
-<a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="index.html">Inicio</a>
-<a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="index.html">Quiénes somos</a>
-<a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="tienda.html">Tienda</a>
-<a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="contacto.html">Contacto</a>
-<a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="faqs.html">FAQs</a>
+<a class="font-headline text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="index.html">Inicio</a>
+<a class="font-headline text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="quienes_somos.html">Quiénes somos</a>
+<a class="font-headline text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="tienda.html">Tienda</a>
+<a class="font-headline text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="contacto.html">Contacto</a>
+<a class="font-headline text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="faqs.html">FAQs</a>
 </div>
-<div class="flex items-center space-x-5">
-<button class="text-slate-600 hover:text-[#E1AB6B] active:scale-95 transition-all"><span class="material-symbols-outlined">search</span></button>
-<button class="text-slate-600 hover:text-[#E1AB6B] active:scale-95 transition-all"><span class="material-symbols-outlined">person</span></button>
-<button class="text-slate-600 hover:text-[#E1AB6B] active:scale-95 transition-all relative">
-<span class="material-symbols-outlined">shopping_cart</span>
+<div class="flex items-center space-x-5 text-[#025960] dark:text-teal-400">
+<button class="active:scale-95 transition-all"><i data-lucide="search" class="w-5 h-5"></i></button>
+<button class="active:scale-95 transition-all"><i data-lucide="user" class="w-5 h-5"></i></button>
+<button class="active:scale-95 transition-all relative">
+<i data-lucide="shopping-cart" class="w-5 h-5"></i>
+<span class="absolute -top-1 -right-1 bg-secondary text-on-secondary text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-body">0</span>
 </button>
 </div>
 </div>
@@ -104,19 +107,19 @@
 </nav>
 <main class="pt-32 pb-24 px-6 md:px-12 max-w-5xl mx-auto">
 <!-- Header Section -->
-<header class="mb-16">
-<div class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest uppercase mb-6">Legal &amp; Cumplimiento</div>
-<h1 class="text-4xl md:text-6xl font-extrabold text-primary leading-tight mb-8">
+<header class="mb-16" data-aos="fade-up">
+<div class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest uppercase mb-6 font-body">Legal &amp; Cumplimiento</div>
+<h1 class="font-headline text-4xl md:text-6xl font-extrabold text-primary leading-tight mb-8">
                 Términos y Condiciones <br/><span class="text-secondary">de Uso y Compra</span>
 </h1>
-<p class="text-lg text-on-surface-variant max-w-2xl leading-relaxed">
+<p class="font-body text-lg text-on-surface-variant max-w-2xl leading-relaxed">
                 Bienvenido a movicarerd.com. Estos términos rigen su relación con nuestros suministros ortopédicos y servicios de salud digital. Por favor, léalos detenidamente.
             </p>
 </header>
-<!-- Main Content (Clinical Atelier Editorial Style) -->
+<!-- Main Content -->
 <div class="relative grid grid-cols-1 md:grid-cols-12 gap-12">
 <!-- Sticky Sidebar Navigation (Desktop) -->
-<aside class="hidden md:block md:col-span-3 sticky top-32 self-start">
+<aside class="hidden md:block md:col-span-3 sticky top-32 self-start font-body" data-aos="fade-right" data-aos-delay="100">
 <nav class="flex flex-col space-y-4 border-l border-surface-container-high pl-6">
 <a class="text-sm font-semibold text-primary hover:text-secondary transition-colors" href="#identificacion">1. Identificación</a>
 <a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#acceso">2. Acceso y Uso</a>
@@ -128,75 +131,75 @@
 <!-- Text Content -->
 <div class="md:col-span-9 space-y-16">
 <!-- Section 1 -->
-<section class="bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-sm border-l-4 border-secondary" id="identificacion">
-<h2 class="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
-<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center text-sm">01</span>
+<section class="bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-sm border-l-4 border-secondary" id="identificacion" data-aos="fade-up">
+<h2 class="font-headline text-2xl font-bold text-primary mb-6 flex items-center gap-3">
+<span class="font-body w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center text-sm">01</span>
                         Identificación del comercio
                     </h2>
-<div class="prose prose-slate max-w-none text-on-surface-variant leading-relaxed space-y-4">
+<div class="font-body max-w-none text-on-surface-variant leading-relaxed space-y-4">
 <p>El sitio web <strong>movicarerd.com</strong> es operado por Movicare Orthopedic Supplies, SRL, una sociedad comercial legalmente constituida bajo las leyes de la República Dominicana, con domicilio social en Santo Domingo.</p>
 <p>Para cualquier consulta, puede contactarnos a través de nuestro canal de atención al cliente o mediante el correo electrónico oficial provisto en nuestra sección de contacto.</p>
 </div>
 </section>
 <!-- Section 2: Cards Layout for Terms -->
-<section id="acceso">
-<h2 class="text-2xl font-bold text-primary mb-10 flex items-center gap-3">
-<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center text-sm">02</span>
+<section id="acceso" data-aos="fade-up">
+<h2 class="font-headline text-2xl font-bold text-primary mb-10 flex items-center gap-3">
+<span class="font-body w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center text-sm">02</span>
                         Acceso y Uso del Portal
                     </h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 font-body">
 <div class="bg-surface-container-low p-6 rounded-lg">
-<h3 class="font-bold text-primary mb-2">Responsabilidad del Usuario</h3>
+<h3 class="font-headline font-bold text-primary mb-2">Responsabilidad del Usuario</h3>
 <p class="text-sm text-on-surface-variant">El usuario se compromete a hacer un uso lícito de los contenidos y servicios ofrecidos, absteniéndose de conductas lesivas a terceros.</p>
 </div>
 <div class="bg-surface-container-low p-6 rounded-lg">
-<h3 class="font-bold text-primary mb-2">Registro de Cuenta</h3>
+<h3 class="font-headline font-bold text-primary mb-2">Registro de Cuenta</h3>
 <p class="text-sm text-on-surface-variant">La veracidad de los datos proporcionados durante el registro es responsabilidad exclusiva del titular de la cuenta.</p>
 </div>
 </div>
 </section>
 <!-- Section 10: Specific Policy -->
-<section class="relative group" id="garantias">
+<section class="relative group" id="garantias" data-aos="fade-up">
 <div class="absolute -left-4 top-0 bottom-0 w-1 bg-surface-container-highest group-hover:bg-secondary transition-colors"></div>
-<h2 class="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
-<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center text-sm">10</span>
+<h2 class="font-headline text-2xl font-bold text-primary mb-6 flex items-center gap-3">
+<span class="font-body w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center text-sm">10</span>
                         Garantías y Devoluciones
                     </h2>
-<div class="bg-white p-8 rounded-xl border border-outline-variant/20 space-y-6">
+<div class="bg-white p-8 rounded-xl border border-outline-variant/20 space-y-6 font-body">
 <p class="text-on-surface-variant">En Movicare, la calidad de nuestros insumos ortopédicos es primordial. Todos nuestros productos cuentan con una garantía de fábrica limitada bajo las siguientes condiciones:</p>
 <ul class="space-y-4">
 <li class="flex gap-4">
-<span class="material-symbols-outlined text-secondary shrink-0">check_circle</span>
+<i data-lucide="check-circle" class="w-5 h-5 text-secondary shrink-0"></i>
 <span class="text-sm text-on-surface-variant">Plazo de 30 días calendario para reportar defectos de fabricación.</span>
 </li>
 <li class="flex gap-4">
-<span class="material-symbols-outlined text-secondary shrink-0">check_circle</span>
+<i data-lucide="check-circle" class="w-5 h-5 text-secondary shrink-0"></i>
 <span class="text-sm text-on-surface-variant">El producto debe conservar su empaque original y no presentar señales de uso inadecuado.</span>
 </li>
 <li class="flex gap-4">
-<span class="material-symbols-outlined text-secondary shrink-0">check_circle</span>
+<i data-lucide="check-circle" class="w-5 h-5 text-secondary shrink-0"></i>
 <span class="text-sm text-on-surface-variant">Insumos de higiene personal o contacto directo con heridas no son sujetos a devolución por razones sanitarias.</span>
 </li>
 </ul>
 </div>
 </section>
 <!-- Section 16: Jurisdiction -->
-<section class="bg-primary text-white p-12 rounded-2xl overflow-hidden relative" id="legislacion">
+<section class="bg-primary text-white p-12 rounded-2xl overflow-hidden relative" id="legislacion" data-aos="fade-up">
 <div class="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
-<h2 class="text-2xl font-bold mb-6 flex items-center gap-3 relative z-10">
-<span class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-sm">16</span>
+<h2 class="font-headline text-2xl font-bold mb-6 flex items-center gap-3 relative z-10">
+<span class="font-body w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-sm">16</span>
                         Legislación aplicable
                     </h2>
-<p class="text-on-primary-container leading-relaxed relative z-10 mb-8">
+<p class="font-body text-on-primary-container leading-relaxed relative z-10 mb-8">
                         Los presentes Términos y Condiciones se rigen por la legislación vigente en la <strong>República Dominicana</strong>. Cualquier controversia será sometida a los tribunales competentes de la jurisdicción de Santo Domingo, Distrito Nacional.
                     </p>
-<div class="flex items-center gap-2 text-secondary font-bold relative z-10">
-<span class="material-symbols-outlined">gavel</span>
+<div class="flex items-center gap-2 text-secondary font-bold relative z-10 font-body">
+<i data-lucide="gavel" class="w-5 h-5"></i>
 <span>Cumplimiento Ley 358-05 de Protección a los Derechos del Consumidor.</span>
 </div>
 </section>
-<!-- Recovery Tracker Visual Element (Custom Component) -->
-<div class="p-8 bg-surface-container-high rounded-xl">
+<!-- Recovery Tracker Visual Element -->
+<div class="p-8 bg-surface-container-high rounded-xl font-body" data-aos="fade-up">
 <div class="flex items-center justify-between mb-4">
 <span class="text-xs font-bold text-primary tracking-widest uppercase">Estatus de Actualización Legal</span>
 <span class="text-xs text-on-surface-variant">Vigente desde: Enero 2024</span>
@@ -208,65 +211,74 @@
 </div>
 </div>
 </main>
-<!-- Footer -->
-<footer class="bg-[#025960] dark:bg-slate-950 w-full pt-16 pb-8">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-screen-2xl mx-auto w-full">
-<div class="col-span-1 md:col-span-1">
-<div class="text-3xl font-manrope font-black text-white mb-6">Movicare</div>
-<p class="text-slate-200/80 font-inter text-sm leading-relaxed mb-6">Excelencia en suministros ortopédicos y bienestar para una vida en movimiento.</p>
-<div class="flex gap-4">
-<span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white cursor-pointer hover:bg-secondary transition-colors"><span class="material-symbols-outlined text-sm">share</span></span>
-<span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white cursor-pointer hover:bg-secondary transition-colors"><span class="material-symbols-outlined text-sm">mail</span></span>
-</div>
-</div>
-<div>
-<h4 class="text-white font-bold mb-6 font-headline">Navegación</h4>
-<ul class="space-y-4">
-<li><a class="text-slate-200/80 hover:text-white font-inter text-sm hover:translate-x-1 transition-transform inline-block" href="index.html">Inicio</a></li>
-<li><a class="text-slate-200/80 hover:text-white font-inter text-sm hover:translate-x-1 transition-transform inline-block" href="index.html">Quiénes somos</a></li>
-<li><a class="text-slate-200/80 hover:text-white font-inter text-sm hover:translate-x-1 transition-transform inline-block" href="tienda.html">Tienda</a></li>
-<li><a class="text-slate-200/80 hover:text-white font-inter text-sm hover:translate-x-1 transition-transform inline-block" href="contacto.html">Contacto</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-white font-bold mb-6 font-headline">Legal</h4>
-<ul class="space-y-4">
-<li><a class="text-slate-200/80 hover:text-white font-inter text-sm hover:translate-x-1 transition-transform inline-block" href="faqs.html">FAQs</a></li>
-<li><a class="text-slate-200/80 hover:text-white font-inter text-sm hover:translate-x-1 transition-transform inline-block" href="privacidad.html">Privacidad</a></li>
-<li><a class="text-[#E1AB6B] font-bold font-inter text-sm hover:translate-x-1 transition-transform inline-block" href="index.html">Términos</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-white font-bold mb-6 font-headline">Ubicación</h4>
-<div class="bg-white/5 p-4 rounded-lg">
-<div class="w-full h-32 bg-slate-800 rounded mb-4 overflow-hidden">
-<img alt="Mapa de ubicación" class="w-full h-full object-cover opacity-50" data-alt="abstract stylized map view of a city grid with teal and gold highlights representing health care hubs" data-location="Santo Domingo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKkaq7FoVTjymwkNq0iM06ZSv_1n7DS_GEq2MqnFPwlH72Nakp0nLerD6p2PY5m-rFokEa-QCOplXVMBx4pnJ5B65_2Pz30TYSeM18HZn4IXNNyCgSpUmpKecBcy1KIwrFu2ZRIAe4rV8fIrWEgUpGcqOSOuYrnLrIE0Ww5syAXVb0Qg6vDdVeyK6xkLKfmG3MDYTAi0Lhh5PNM-VyrFy3O5QLg0PuXgxmnkCDSOM6X9k45ko3X29CzNqLvk-iCvaISgVZf7aH2wo"/>
-</div>
-<p class="text-xs text-slate-200/80">Santo Domingo, República Dominicana.</p>
-</div>
-</div>
-</div>
-<div class="max-w-screen-2xl mx-auto px-8 mt-16 pt-8 border-t border-white/10">
-<p class="text-center text-slate-400 text-xs font-inter">© 2024 Movicare Orthopedic Supplies. Todos los derechos reservados.</p>
-</div>
-</footer>
-<!-- BottomNavBar (Mobile) -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-2 bg-white dark:bg-slate-950 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] rounded-t-2xl z-50">
-<a class="flex flex-col items-center justify-center text-slate-400 font-inter text-[10px] font-medium active:scale-90 transition-all" href="index.html">
-<span class="material-symbols-outlined">home</span>
-<span>Inicio</span>
+<!-- Floating WhatsApp Button -->
+<a class="fixed bottom-24 right-6 md:bottom-8 md:right-8 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all z-40" href="https://wa.me/8494495398" target="_blank">
+    <svg fill="currentColor" height="32" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.185-.573c.948.517 1.871.887 3.134.887 3.181 0 5.767-2.586 5.767-5.766 0-3.18-2.587-5.729-5.755-5.729zm3.844 8.839c-.152.427-.75.786-1.042.844-.241.05-.55.061-.865-.042-.204-.067-.476-.146-1.012-.369-1.395-.581-2.29-2.113-2.36-2.204-.07-.092-.563-.748-.563-1.428 0-.68.354-1.012.479-1.148.125-.135.271-.169.354-.169.083 0 .166 0 .249.006.088.003.204-.033.318.241.115.274.394.957.427 1.025.033.068.053.146.01.231-.042.085-.062.138-.125.212-.062.074-.131.165-.187.221-.063.063-.129.131-.056.257.073.125.324.536.696.867.48.427.883.56 1.012.624.128.062.204.053.28-.033.076-.088.324-.378.41-.508.087-.13.174-.109.294-.065.118.044.75.354.878.418.128.065.214.095.244.152.031.057.031.328-.121.755z"></path>
+    </svg>
 </a>
-<a class="flex flex-col items-center justify-center text-slate-400 font-inter text-[10px] font-medium active:scale-90 transition-all" href="index.html">
-<span class="material-symbols-outlined">storefront</span>
-<span>Tienda</span>
-</a>
-<a class="flex flex-col items-center justify-center text-slate-400 font-inter text-[10px] font-medium active:scale-90 transition-all" href="index.html">
-<span class="material-symbols-outlined">person</span>
-<span>Cuenta</span>
-</a>
-<a class="flex flex-col items-center justify-center text-slate-400 font-inter text-[10px] font-medium active:scale-90 transition-all" href="index.html">
-<span class="material-symbols-outlined">chat</span>
-<span>Contacto</span>
-</a>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-2 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50 rounded-t-2xl">
+    <a class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all" href="index.html">
+        <i data-lucide="home" class="w-5 h-5"></i>
+        <span class="font-body text-[10px] font-medium">Inicio</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all" href="tienda.html">
+        <i data-lucide="store" class="w-5 h-5"></i>
+        <span class="font-body text-[10px] font-medium">Tienda</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all" href="registro.html">
+        <i data-lucide="user" class="w-5 h-5"></i>
+        <span class="font-body text-[10px] font-medium">Cuenta</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all" href="contacto.html">
+        <i data-lucide="message-square" class="w-5 h-5"></i>
+        <span class="font-body text-[10px] font-medium">Contacto</span>
+    </a>
 </nav>
+<!-- Footer -->
+<footer class="w-full pt-16 pb-8 bg-[#025960] dark:bg-slate-950 text-white mt-12 font-body">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-screen-2xl mx-auto w-full">
+        <div class="md:col-span-1">
+            <img src="logo.svg" alt="Movicare Logo" class="h-12 w-auto brightness-0 invert">
+            <p class="mt-4 text-slate-200/80 text-sm leading-relaxed">
+                Excelencia en insumos ortopédicos para tu bienestar y movilidad diaria. Calidad clínica con toque humano.
+            </p>
+        </div>
+        <div>
+            <h4 class="font-headline font-bold mb-6 text-[#E1AB6B]">Enlaces Rápidos</h4>
+            <ul class="space-y-4">
+                <li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="index.html">Inicio</a></li>
+                <li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="quienes_somos.html">Quiénes somos</a></li>
+                <li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="tienda.html">Tienda</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-headline font-bold mb-6 text-[#E1AB6B]">Asistencia</h4>
+            <ul class="space-y-4">
+                <li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="faqs.html">FAQs</a></li>
+                <li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="privacidad.html">Privacidad</a></li>
+                <li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="terminos_condiciones.html">Términos</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-headline font-bold mb-6 text-[#E1AB6B]">Newsletter</h4>
+            <p class="text-sm text-slate-200/80 mb-4">Suscríbete para recibir consejos de salud y ofertas exclusivas.</p>
+            <div class="flex gap-2">
+                <input class="bg-white/10 border-none rounded-lg px-4 py-2 text-white w-full text-sm focus:ring-1 focus:ring-[#E1AB6B]" placeholder="Tu correo" type="email"/>
+                <button class="bg-[#E1AB6B] text-[#025960] px-4 py-2 rounded-lg font-bold hover:bg-[#d09a5a] transition-colors">
+                    <i data-lucide="send" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="mt-16 pt-8 border-t border-white/10 text-center text-xs text-slate-200/60">
+        © 2024 Movicare Orthopedic Supplies. Todos los derechos reservados.
+    </div>
+</footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    lucide.createIcons();
+    AOS.init({ duration: 800, once: true, offset: 100 });
+</script>
 </body></html>

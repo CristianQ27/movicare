@@ -5,14 +5,19 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Únete a Movicare - Registro de Clientes</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
+            fontFamily: {
+              "headline": ["Manrope", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
             colors: {
               "error": "#ba1a1a",
               "surface-tint": "#1e686f",
@@ -73,9 +78,6 @@
       }
     </script>
 <style>
-      .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      }
       .custom-glass {
         background: rgba(255, 255, 255, 0.9);
         backdrop-filter: blur(12px);
@@ -86,18 +88,20 @@
 <!-- TopNavBar -->
 <header class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm">
 <div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto w-full">
-<div class="text-2xl font-bold text-[#025960] dark:text-teal-500 font-headline">Movicare</div>
+<a class="flex items-center" href="index.html">
+    <img src="logo.svg" alt="Movicare Logo" class="h-10 w-auto">
+</a>
 <nav class="hidden md:flex items-center gap-8">
 <a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300 active:scale-95 transition-transform" href="index.html">Inicio</a>
-<a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300 active:scale-95 transition-transform" href="index.html">Quiénes somos</a>
+<a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300 active:scale-95 transition-transform" href="quienes_somos.html">Quiénes somos</a>
 <a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300 active:scale-95 transition-transform" href="tienda.html">Tienda</a>
 <a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300 active:scale-95 transition-transform" href="contacto.html">Contacto</a>
 <a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300 active:scale-95 transition-transform" href="faqs.html">FAQs</a>
 </nav>
-<div class="flex items-center gap-4">
-<button class="material-symbols-outlined text-primary p-2">search</button>
-<button class="material-symbols-outlined text-primary p-2">shopping_cart</button>
-<button class="material-symbols-outlined text-primary p-2">person</button>
+<div class="flex items-center gap-4 text-primary">
+<button class="p-2"><i data-lucide="search" class="w-5 h-5"></i></button>
+<button class="p-2"><i data-lucide="shopping-cart" class="w-5 h-5"></i></button>
+<button class="p-2"><i data-lucide="user" class="w-5 h-5"></i></button>
 </div>
 </div>
 <div class="bg-gradient-to-b from-slate-100 to-transparent dark:from-slate-800 h-[1px]"></div>
@@ -159,7 +163,7 @@
 <h3 class="text-xl font-headline font-bold text-primary">Beneficios de ser miembro</h3>
 <div class="flex gap-4 items-start">
 <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-on-secondary-container">local_shipping</span>
+<i data-lucide="truck" class="w-5 h-5 text-on-secondary-container"></i>
 </div>
 <div>
 <h4 class="font-bold text-primary">Track orders</h4>
@@ -168,7 +172,7 @@
 </div>
 <div class="flex gap-4 items-start">
 <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-on-secondary-container">bolt</span>
+<i data-lucide="zap" class="w-5 h-5 text-on-secondary-container"></i>
 </div>
 <div>
 <h4 class="font-bold text-primary">Faster checkout</h4>
@@ -177,7 +181,7 @@
 </div>
 <div class="flex gap-4 items-start">
 <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-on-secondary-container">redeem</span>
+<i data-lucide="gift" class="w-5 h-5 text-on-secondary-container"></i>
 </div>
 <div>
 <h4 class="font-bold text-primary">Exclusive offers</h4>
@@ -190,61 +194,73 @@
 </div>
 </main>
 <!-- Floating WhatsApp Button -->
-<a class="fixed bottom-8 right-8 z-50 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 active:scale-90 transition-transform" href="index.html">
-<svg class="w-8 h-8 fill-current" viewbox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793 0-.853.448-1.273.607-1.446.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.088.275.073.376-.044.1-.117.434-.506.549-.68.116-.174.232-.145.39-.087.158.058 1.012.477 1.185.564.174.087.289.13.332.202.045.072.045.419-.1.824z"></path></svg>
+<a class="fixed bottom-24 right-6 md:bottom-8 md:right-8 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all z-40" href="https://wa.me/8494495398" target="_blank">
+    <svg fill="currentColor" height="32" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.185-.573c.948.517 1.871.887 3.134.887 3.181 0 5.767-2.586 5.767-5.766 0-3.18-2.587-5.729-5.755-5.729zm3.844 8.839c-.152.427-.75.786-1.042.844-.241.05-.55.061-.865-.042-.204-.067-.476-.146-1.012-.369-1.395-.581-2.29-2.113-2.36-2.204-.07-.092-.563-.748-.563-1.428 0-.68.354-1.012.479-1.148.125-.135.271-.169.354-.169.083 0 .166 0 .249.006.088.003.204-.033.318.241.115.274.394.957.427 1.025.033.068.053.146.01.231-.042.085-.062.138-.125.212-.062.074-.131.165-.187.221-.063.063-.129.131-.056.257.073.125.324.536.696.867.48.427.883.56 1.012.624.128.062.204.053.28-.033.076-.088.324-.378.41-.508.087-.13.174-.109.294-.065.118.044.75.354.878.418.128.065.214.095.244.152.031.057.031.328-.121.755z"></path>
+    </svg>
 </a>
-<!-- Footer -->
-<footer class="w-full pt-16 pb-8 bg-[#025960] dark:bg-slate-950 text-white">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-screen-2xl mx-auto w-full">
-<div class="space-y-4">
-<div class="text-3xl font-manrope font-black text-white">Movicare</div>
-<p class="font-inter text-sm leading-relaxed text-slate-200/80">Soluciones ortopédicas de alta precisión para una vida en movimiento.</p>
-</div>
-<div class="space-y-4">
-<h4 class="font-bold text-[#E1AB6B]">Enlaces Rápidos</h4>
-<ul class="space-y-2">
-<li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 cursor-pointer text-sm" href="index.html">Inicio</a></li>
-<li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 cursor-pointer text-sm" href="index.html">Quiénes somos</a></li>
-<li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 cursor-pointer text-sm" href="tienda.html">Tienda</a></li>
-</ul>
-</div>
-<div class="space-y-4">
-<h4 class="font-bold text-[#E1AB6B]">Ayuda</h4>
-<ul class="space-y-2">
-<li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 cursor-pointer text-sm" href="faqs.html">FAQs</a></li>
-<li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 cursor-pointer text-sm" href="privacidad.html">Privacidad</a></li>
-<li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 cursor-pointer text-sm" href="index.html">Términos</a></li>
-</ul>
-</div>
-<div class="space-y-4">
-<h4 class="font-bold text-[#E1AB6B]">Newsletter</h4>
-<div class="flex gap-2">
-<input class="bg-white/10 border-none rounded-lg px-4 py-2 text-sm w-full focus:ring-1 focus:ring-[#E1AB6B]" placeholder="Tu correo" type="email"/>
-<button class="bg-[#E1AB6B] text-primary px-4 py-2 rounded-lg material-symbols-outlined">send</button>
-</div>
-</div>
-</div>
-<div class="mt-16 px-8 max-w-screen-2xl mx-auto text-center border-t border-white/10 pt-8">
-<p class="text-xs text-slate-300">© 2024 Movicare Orthopedic Supplies. Todos los derechos reservados.</p>
-</div>
-</footer>
 <!-- BottomNavBar (Mobile Only) -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-2 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50">
-<a class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all" href="index.html">
-<span class="material-symbols-outlined">home</span>
-<span class="font-inter text-[10px] font-medium">Inicio</span>
-</a>
-<a class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all" href="index.html">
-<span class="material-symbols-outlined">storefront</span>
-<span class="font-inter text-[10px] font-medium">Tienda</span>
-</a>
-<a class="flex flex-col items-center justify-center bg-[#025960]/10 text-[#025960] rounded-xl px-3 py-1 active:scale-90 transition-all" href="index.html">
-<span class="material-symbols-outlined">person</span>
-<span class="font-inter text-[10px] font-medium">Cuenta</span>
-</a>
-<a class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all" href="index.html">
-<span class="material-symbols-outlined">chat</span>
-<span class="font-inter text-[10px] font-medium">Contacto</span>
-</a>
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-2 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50 rounded-t-2xl">
+    <a class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all" href="index.html">
+        <i data-lucide="home" class="w-5 h-5"></i>
+        <span class="font-inter text-[10px] font-medium">Inicio</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all" href="tienda.html">
+        <i data-lucide="store" class="w-5 h-5"></i>
+        <span class="font-inter text-[10px] font-medium">Tienda</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all" href="registro.html">
+        <i data-lucide="user" class="w-5 h-5"></i>
+        <span class="font-inter text-[10px] font-medium">Cuenta</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all" href="contacto.html">
+        <i data-lucide="message-square" class="w-5 h-5"></i>
+        <span class="font-inter text-[10px] font-medium">Contacto</span>
+    </a>
 </nav>
+<!-- Footer -->
+<footer class="w-full pt-16 pb-8 bg-[#025960] dark:bg-slate-950 text-white mt-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-screen-2xl mx-auto w-full">
+        <div class="md:col-span-1">
+            <img src="logo.svg" alt="Movicare Logo" class="h-12 w-auto brightness-0 invert">
+            <p class="mt-4 text-slate-200/80 font-inter text-sm leading-relaxed">
+                Excelencia en insumos ortopédicos para tu bienestar y movilidad diaria. Calidad clínica con toque humano.
+            </p>
+        </div>
+        <div>
+            <h4 class="font-headline font-bold mb-6 text-[#E1AB6B]">Enlaces Rápidos</h4>
+            <ul class="space-y-4">
+                <li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="index.html">Inicio</a></li>
+                <li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="quienes_somos.html">Quiénes somos</a></li>
+                <li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="tienda.html">Tienda</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-headline font-bold mb-6 text-[#E1AB6B]">Asistencia</h4>
+            <ul class="space-y-4">
+                <li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="faqs.html">FAQs</a></li>
+                <li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="privacidad.html">Privacidad</a></li>
+                <li><a class="text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="terminos_condiciones.html">Términos</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-headline font-bold mb-6 text-[#E1AB6B]">Newsletter</h4>
+            <p class="text-sm text-slate-200/80 mb-4">Suscríbete para recibir consejos de salud y ofertas exclusivas.</p>
+            <div class="flex gap-2">
+                <input class="bg-white/10 border-none rounded-lg px-4 py-2 text-white w-full text-sm focus:ring-1 focus:ring-[#E1AB6B]" placeholder="Tu correo" type="email"/>
+                <button class="bg-[#E1AB6B] text-[#025960] px-4 py-2 rounded-lg font-bold hover:bg-[#d09a5a] transition-colors">
+                    <i data-lucide="send" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="mt-16 pt-8 border-t border-white/10 text-center text-xs text-slate-200/60 font-inter">
+        © 2024 Movicare Orthopedic Supplies. Todos los derechos reservados.
+    </div>
+</footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  lucide.createIcons();
+  AOS.init({ duration: 800, once: true, offset: 100 });
+</script>
 </body></html>
