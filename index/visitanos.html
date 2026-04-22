@@ -1,0 +1,315 @@
+<!-- 
+    SECCIÓN: VISÍTANOS + FORMULARIO (Versión Corregida)
+    - Fix: Cierre explícito de textarea para evitar errores en Odoo.
+-->
+
+<style>
+  .location-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+  }
+
+  .contact-info-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--brand-secondary);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .contact-info-card:hover {
+    transform: translateX(10px);
+    background-color: #f1f3f5;
+  }
+
+  .icon-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: rgba(176, 141, 87, 0.1);
+    color: var(--brand-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .info-title {
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .info-detail {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+
+  .form-container {
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+  }
+
+  .form-container .s_website_form_label_content {
+    font-weight: 700;
+    color: var(--brand-primary);
+    font-family: "Manrope", sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .form-container .s_website_form_input,
+  .form-container .form-control {
+    border: 2px solid #f0f0f0 !important;
+    border-radius: 12px !important;
+    padding: 0.8rem 1.2rem !important;
+    transition: all 0.3s ease !important;
+    background-color: #fcfcfc !important;
+  }
+
+  .form-container .s_website_form_input:focus,
+  .form-container .form-control:focus {
+    border-color: var(--brand-secondary) !important;
+    box-shadow: 0 0 0 4px rgba(176, 141, 87, 0.1) !important;
+    background-color: #ffffff !important;
+  }
+
+  .form-container .s_website_form_send,
+  .form-container .btn-primary {
+    background-color: var(--brand-secondary) !important;
+    border: none !important;
+    padding: 1rem 2.5rem !important;
+    border-radius: 12px !important;
+    font-weight: 800 !important;
+    color: white !important;
+    transition: all 0.3s ease !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+  }
+
+  .form-container .s_website_form_send:hover {
+    background-color: #9a7a4a !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(176, 141, 87, 0.2);
+  }
+
+  .btn-contact-action {
+    background-color: var(--brand-primary) !important;
+    color: white !important;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+  }
+
+  .btn-contact-action:hover {
+    background-color: #002b2f !important;
+    transform: translateY(-2px);
+  }
+
+  @media (min-width: 992px) {
+    .form-container .s_website_form_send {
+      width: auto;
+    }
+  }
+</style>
+
+<section class="location-section">
+  <div class="container-fluid px-4">
+    <div class="row g-5 align-items-start">
+      <!-- Columna de Información -->
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="mb-4">
+          <span
+            class="badge rounded-pill px-3 py-2 mb-3"
+            style="
+              background-color: rgba(0, 64, 69, 0.1);
+              color: var(--brand-primary);
+              font-weight: 700;
+            "
+            >Estamos para ti</span
+          >
+          <h2 class="font-headline h1 fw-bold text-brand-primary mb-4">
+            Visítanos en nuestra tienda
+          </h2>
+          <p class="text-muted mb-5">
+            ¿Tienes dudas o necesitas un presupuesto personalizado? Déjanos un
+            mensaje y nuestro equipo de expertos te contactará en menos de 24
+            horas.
+          </p>
+        </div>
+
+        <div class="contact-cards">
+          <div
+            class="contact-info-card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="icon-box">
+              <i data-lucide="map-pin"></i>
+            </div>
+            <h3 class="info-title">Ubicación Física</h3>
+            <p class="info-detail">Av. Libertad #123, Local 4, Santiago, RD.</p>
+          </div>
+
+          <div
+            class="contact-info-card"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="icon-box">
+              <i data-lucide="phone"></i>
+            </div>
+            <h3 class="info-title">Contacto Directo</h3>
+            <p class="info-detail">+1 (849) 449-5398</p>
+          </div>
+        </div>
+
+        <a href="https://wa.me/8494495398" class="btn-contact-action">
+          WhatsApp Directo <i data-lucide="message-circle"></i>
+        </a>
+      </div>
+
+      <!-- Columna del formulario (Corregido: cierre de textarea) -->
+      <div class="col-lg-7" data-aos="fade-left">
+        <div class="form-container">
+          <div class="container-fluid">
+            <form
+              action="/website/form/"
+              method="post"
+              enctype="multipart/form-data"
+              class="o_mark_required"
+              data-mark="*"
+              data-pre-fill="true"
+              data-model_name="mail.mail"
+              data-success-mode="redirect"
+              data-success-page="/contactus-thank-you"
+            >
+              <div class="s_website_form_rows row s_col_no_bgcolor">
+                <div
+                  data-name="Field"
+                  class="s_website_form_field mb-3 col-12 s_website_form_dnone"
+                >
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label
+                      class="col-form-label col-sm-auto s_website_form_label"
+                      style="width: 200px"
+                    >
+                      <span class="s_website_form_label_content"></span>
+                    </label>
+                    <div class="col-sm">
+                      <input
+                        type="hidden"
+                        class="form-control s_website_form_input"
+                        name="email_to"
+                        value="info@movicare.com"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-name="Field"
+                  class="s_website_form_field mb-3 col-12 s_website_form_custom s_website_form_required"
+                  data-type="char"
+                >
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label
+                      class="col-form-label col-sm-auto s_website_form_label"
+                      style="width: 200px"
+                      ><span class="s_website_form_label_content"
+                        >Nombre Completo</span
+                      ><span class="s_website_form_mark"> *</span></label
+                    >
+                    <div class="col-sm">
+                      <input
+                        class="form-control s_website_form_input"
+                        type="text"
+                        name="name"
+                        required=""
+                        placeholder="Tu nombre aquí"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-name="Field"
+                  class="s_website_form_field mb-3 col-12 s_website_form_model_required"
+                  data-type="email"
+                >
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label
+                      class="col-form-label col-sm-auto s_website_form_label"
+                      style="width: 200px"
+                      ><span class="s_website_form_label_content"
+                        >Correo Electrónico</span
+                      ><span class="s_website_form_mark"> *</span></label
+                    >
+                    <div class="col-sm">
+                      <input
+                        class="form-control s_website_form_input"
+                        type="email"
+                        name="email_from"
+                        required=""
+                        placeholder="ejemplo@correo.com"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-name="Field"
+                  class="s_website_form_field mb-3 col-12 s_website_form_custom s_website_form_required"
+                  data-type="text"
+                >
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label
+                      class="col-form-label col-sm-auto s_website_form_label"
+                      style="width: 200px"
+                      ><span class="s_website_form_label_content"
+                        >Tu Mensaje o Consulta</span
+                      ><span class="s_website_form_mark"> *</span></label
+                    >
+                    <div class="col-sm">
+                      <textarea
+                        class="form-control s_website_form_input"
+                        name="description"
+                        required=""
+                        placeholder="¿En qué podemos ayudarte?"
+                        rows="4"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="mb-0 py-2 col-12 s_website_form_submit text-end s_website_form_no_submit_label"
+                >
+                  <div style="width: 200px" class="s_website_form_label"></div>
+                  <span id="s_website_form_result"></span>
+                  <a
+                    href="#"
+                    role="button"
+                    class="btn btn-primary s_website_form_send"
+                    >Enviar Mensaje</a
+                  >
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

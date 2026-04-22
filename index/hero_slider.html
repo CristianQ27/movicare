@@ -1,0 +1,224 @@
+<!-- 
+    VERSIÓN FINAL CORREGIDA (Capa de imagen y texto superpuestos)
+-->
+
+<!-- [INI] <HEAD_SECTION> -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<style>
+  :root {
+    --brand-primary: #004045;
+    --brand-secondary: #b08d57;
+    --brand-accent: #f4bc7a;
+  }
+
+  .hero-slider-section {
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    position: relative;
+    background-color: #000; /* Fondo negro por si la imagen tarda en cargar */
+  }
+
+  .hero-slider-section .font-headline {
+    font-family: "Manrope", sans-serif;
+  }
+  .hero-slider-section .font-body {
+    font-family: "Inter", sans-serif;
+  }
+
+  .btn-brand-secondary {
+    background-color: var(--brand-secondary) !important;
+    color: white !important;
+    border: none !important;
+    padding: 1.2rem 2.5rem;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .btn-brand-secondary:hover {
+    background-color: #9a7a4a !important;
+    transform: translateY(-2px);
+  }
+
+  .btn-brand-outline {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    padding: 1.2rem 2.5rem;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .btn-brand-outline:hover {
+    background: white !important;
+    color: var(--brand-primary) !important;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1.1;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+  }
+
+  .slide-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .slide-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 50%,
+      transparent 100%
+    );
+    z-index: 2;
+  }
+
+  .content-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    padding: 0 8%;
+  }
+
+  /* Swiper Dots */
+  .swiper-pagination-bullet {
+    background: white !important;
+    opacity: 0.5;
+  }
+  .swiper-pagination-bullet-active {
+    background: var(--brand-accent) !important;
+    opacity: 1;
+  }
+</style>
+<!-- [END] <HEAD_SECTION> -->
+
+<!-- [INI] <HTML_SECTION> -->
+<section class="hero-slider-section">
+  <div class="swiper hero-swiper h-100 w-100">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide d-flex align-items-center position-relative">
+        <img
+          class="slide-bg-img"
+          src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop"
+          alt="Cuidados Médicos"
+        />
+        <div class="slide-overlay"></div>
+        <div class="content-container">
+          <div class="font-headline hero-title text-left">
+            Soluciones para tu <br />
+            <span style="color: var(--brand-accent)">movilidad</span> y
+            bienestar
+          </div>
+          <p class="font-body hero-subtitle">
+            Especialistas en insumos ortopédicos y productos de apoyo de alta
+            calidad. Recupera tu independencia con nosotros.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="/shop" class="btn-brand-secondary font-headline">
+              Ver catálogo <i data-lucide="arrow-right"></i>
+            </a>
+            <a
+              href="https://wa.me/8494495398"
+              class="btn-brand-outline font-headline"
+            >
+              <i data-lucide="message-square"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide d-flex align-items-center position-relative">
+        <img
+          class="slide-bg-img"
+          src="https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?q=80&w=2070&auto=format&fit=crop"
+          alt="Rehabilitación"
+        />
+        <div class="slide-overlay"></div>
+        <div class="content-container">
+          <div class="font-headline hero-title">
+            Tu <span style="color: var(--brand-accent)">recuperación</span> es
+            <br />
+            nuestra prioridad
+          </div>
+          <p class="font-body hero-subtitle">
+            Acompañamos cada etapa de tu proceso con asesoría experta y equipos
+            de última generación.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="/contactus" class="btn-brand-secondary font-headline">
+              Solicitar asesoría <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Swiper UI -->
+    <div class="swiper-pagination"></div>
+    <div
+      class="swiper-button-next d-none d-md-flex"
+      style="color: white; z-index: 20"
+    ></div>
+    <div
+      class="swiper-button-prev d-none d-md-flex"
+      style="color: white; z-index: 20"
+    ></div>
+  </div>
+</section>
+<!-- [END] <HTML_SECTION> -->
+
+<!-- [INI] <BODY_SECTION> -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (window.lucide) lucide.createIcons();
+    const swiper = new Swiper(".hero-swiper", {
+      loop: true,
+      effect: "fade",
+      fadeEffect: { crossFade: true },
+      autoplay: { delay: 5000 },
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  });
+</script>
+<!-- [END] <BODY_SECTION> -->
