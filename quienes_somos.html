@@ -1,23 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html class="scroll-smooth" lang="es"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<script src="https://unpkg.com/lucide@latest"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-<script id="tailwind-config">
+<html class="scroll-smooth" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
             colors: {
-              "error": "#ba1a1a",
+              error: "#ba1a1a",
               "surface-tint": "#1e686f",
               "on-primary-container": "#8bced5",
-              "tertiary": "#243d3f",
+              tertiary: "#243d3f",
               "on-primary-fixed": "#002023",
               "inverse-primary": "#8ed2d9",
               "on-tertiary": "#ffffff",
@@ -25,7 +32,7 @@
               "on-tertiary-fixed": "#051f21",
               "on-primary-fixed-variant": "#004f55",
               "on-tertiary-fixed-variant": "#324b4d",
-              "primary": "#004045",
+              primary: "#004045",
               "on-surface-variant": "#3f484a",
               "on-secondary-fixed-variant": "#643e06",
               "inverse-on-surface": "#f0f1f0",
@@ -49,8 +56,8 @@
               "secondary-fixed": "#ffddb9",
               "surface-dim": "#d9dada",
               "surface-container-lowest": "#ffffff",
-              "secondary": "#80561e",
-              "surface": "#f9f9f9",
+              secondary: "#80561e",
+              surface: "#f9f9f9",
               "on-tertiary-container": "#acc7c9",
               "tertiary-container": "#3b5456",
               "on-secondary": "#ffffff",
@@ -58,26 +65,31 @@
               "tertiary-fixed": "#cce8ea",
               "primary-container": "#025960",
               "surface-container-highest": "#e2e3e2",
-              "background": "#f9f9f9",
-              "outline": "#6f797a",
-              "primary-fixed-dim": "#8ed2d9"
+              background: "#f9f9f9",
+              outline: "#6f797a",
+              "primary-fixed-dim": "#8ed2d9",
             },
             fontFamily: {
-              "headline": ["Manrope", "sans-serif"],
-              "body": ["Inter", "sans-serif"],
-              "label": ["Inter", "sans-serif"]
+              headline: ["Manrope", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+              label: ["Inter", "sans-serif"],
             },
-            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
           },
         },
-      }
+      };
     </script>
-<style type="text/tailwindcss">
-        @layer base {
-            body {
-                @apply bg-surface text-on-surface antialiased;
-            }
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply bg-surface text-on-surface antialiased;
         }
+      }
       .glass-nav {
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
@@ -86,209 +98,511 @@
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
       }
     </style>
-</head>
-<body class="bg-surface font-body text-on-surface antialiased">
-<!-- Top Navigation -->
-<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm transition-all duration-300">
-<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto w-full">
-<a class="flex items-center" href="index.html">
-    <img src="logo.svg" alt="Movicare Logo" class="h-10 w-auto">
-</a>
-<!-- Desktop Links -->
-<div class="hidden md:flex gap-8 items-center">
-<a class="font-headline text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="index.html">Inicio</a>
-<a class="font-headline text-sm font-semibold tracking-tight text-[#025960] border-b-2 border-[#E1AB6B] pb-1 hover:text-[#E1AB6B] transition-colors duration-300" href="quienes_somos.html">Quiénes somos</a>
-<a class="font-headline text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="tienda.html">Tienda</a>
-<a class="font-headline text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="contacto.html">Contacto</a>
-<a class="font-headline text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300" href="faqs.html">FAQs</a>
-</div>
-<div class="flex items-center gap-4">
-<button class="text-[#025960] dark:text-teal-400 active:scale-95 transition-transform"><i data-lucide="search" class="w-5 h-5"></i></button>
-<button class="text-[#025960] dark:text-teal-400 active:scale-95 transition-transform"><i data-lucide="shopping-cart" class="w-5 h-5"></i></button>
-<button class="text-[#025960] dark:text-teal-400 active:scale-95 transition-transform"><i data-lucide="user" class="w-5 h-5"></i></button>
-</div>
-</div>
-<div class="bg-gradient-to-b from-slate-100 to-transparent dark:from-slate-800 h-[1px]"></div>
-</nav>
-<main class="pt-20">
-<!-- Hero Section -->
-<header class="relative h-[614px] flex items-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img alt="Calm medical environment" class="w-full h-full object-cover" data-alt="Modern bright medical clinic interior with soft natural light, minimalist design, and lush indoor plants for a calming atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVtt5DOn1ZnJRvNN6qxcyOw5Kkw23okOB6b-kraqOms7LNWAIxiVS9CxejNQyRBtiNcFDVRJ7PJU_TM3Nz-D9V0hLy6dGK0shSeEe77Zl1vKjxNw9EzzLH9sQGCoHS8Rz0TQnef_U_MKACNr-2oxJqafUnFENWbrhuFphPBBQTSIBQ6tr1z_OQjLN-HLoj23GlyH2mrJ0oT8bN6ClKa22ofCtE5TNLgtj0WgI_yyapwcNOd0i5iz6GwSkWeXwD_zSrWhMxtnLr9zI"/>
-<div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/20"></div>
-</div>
-<div class="relative z-10 max-w-screen-2xl mx-auto px-8 w-full">
-<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white max-w-2xl leading-tight">
-                    Nuestra Misión: <span class="text-secondary-container">Tu Movilidad</span>
-</h1>
-<p class="mt-6 text-xl text-white/90 max-w-xl font-medium font-body">
-                    Redefiniendo el cuidado ortopédico con un toque humano y profesional.
-                </p>
-</div>
-</header>
-<!-- Mission Content Section -->
-<section class="py-24 bg-surface">
-<div class="max-w-screen-2xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-<div class="relative">
-<div class="absolute -top-8 -left-8 w-32 h-32 bg-secondary/10 rounded-full blur-3xl"></div>
-<img alt="Orthopedic care" class="rounded-xl shadow-2xl relative z-10" data-alt="Close-up of a healthcare professional adjusting a knee brace on a patient, warm lighting, focus on careful hand movement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyjf7KV_pDe5Z7Vt7Sw2t_x0zsTYKkJe6vqdVmaQiY8eTl5j262bu2Udgr3z4o4TyVcrVRBVzaEmvAgA5G7B0sI9SJqeMg0nrC3pLJn9cotcYv_KZRRtGMFsLoWIVqD341sJpntIWRVGWgfwZ-CH6D6m6H8cz3Req1Z9QMtjh1X6u4ox1wismkF-Rq9WdjXJuYm2_NBmAilZDkO1K6gEh_rv8XZnmmy0TPfTP4p54xrGYgc6MFC3Ng1eIYFKgzKpAQZL6fBrtn3OM"/>
-<div class="absolute -bottom-6 -right-6 bg-primary p-8 rounded-xl shadow-xl z-20 hidden md:block">
-<span class="text-white font-headline text-3xl font-bold italic">+15 años</span>
-<p class="text-white/80 text-sm font-body">Mejorando vidas</p>
-</div>
-</div>
-<div>
-<h2 class="font-headline text-3xl font-bold text-primary-container mb-8">Compromiso con la Excelencia</h2>
-<div class="space-y-6 text-on-surface-variant text-lg leading-relaxed font-body">
-<p>
-                            En <span class="font-bold text-primary">Movicare</span> nos dedicamos a la comercialización de insumos ortopédicos de alta gama, entendiendo que cada paciente tiene un camino único hacia la recuperación.
-                        </p>
-<p>
-                            Trabajamos para ofrecer soluciones confiables, accesibles y de calidad. Nuestra selección de productos no solo busca la funcionalidad técnica, sino el confort integral de quienes confían en nosotros.
-                        </p>
-<div class="pt-4">
-<button class="bg-secondary text-on-secondary px-8 py-4 rounded-lg font-bold shadow-lg hover:translate-y-[-2px] transition-all flex items-center gap-2 font-body">
-                                Ver Catálogo <i data-lucide="arrow-right" class="w-5 h-5"></i>
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Values Section - Bento Grid -->
-<section class="py-24 bg-surface-container-low">
-<div class="max-w-screen-2xl mx-auto px-8">
-<div class="text-center mb-16">
-<h2 class="font-headline text-4xl font-bold text-primary mb-4">Nuestros Valores Fundamentales</h2>
-<p class="font-body text-on-surface-variant max-w-2xl mx-auto">Los pilares que sostienen cada una de nuestras interacciones y procesos de calidad.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-<!-- Trust -->
-<div class="bg-surface-container-lowest p-8 rounded-xl hover:shadow-xl transition-shadow border border-white/50">
-<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-<i data-lucide="shield-check" class="w-8 h-8 text-primary"></i>
-</div>
-<h3 class="font-headline text-xl font-bold text-primary mb-3">Confianza</h3>
-<p class="font-body text-sm text-on-surface-variant leading-relaxed">Transparencia absoluta en cada producto y recomendación técnica para tu seguridad.</p>
-</div>
-<!-- Accessibility -->
-<div class="bg-surface-container-lowest p-8 rounded-xl hover:shadow-xl transition-shadow border border-white/50">
-<div class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center mb-6">
-<i data-lucide="banknote" class="w-8 h-8 text-secondary"></i>
-</div>
-<h3 class="font-headline text-xl font-bold text-primary mb-3">Accesibilidad</h3>
-<p class="font-body text-sm text-on-surface-variant leading-relaxed">Soluciones de alta calidad diseñadas para ser accesibles a toda la comunidad.</p>
-</div>
-<!-- Quality -->
-<div class="bg-surface-container-lowest p-8 rounded-xl hover:shadow-xl transition-shadow border border-white/50">
-<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-<i data-lucide="award" class="w-8 h-8 text-primary"></i>
-</div>
-<h3 class="font-headline text-xl font-bold text-primary mb-3">Calidad</h3>
-<p class="font-body text-sm text-on-surface-variant leading-relaxed">Certificación internacional en todos nuestros insumos y equipos ortopédicos.</p>
-</div>
-<!-- Personal Attention -->
-<div class="bg-surface-container-lowest p-8 rounded-xl hover:shadow-xl transition-shadow border border-white/50">
-<div class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center mb-6">
-<i data-lucide="headset" class="w-8 h-8 text-secondary"></i>
-</div>
-<h3 class="font-headline text-xl font-bold text-primary mb-3">Atención Personal</h3>
-<p class="font-body text-sm text-on-surface-variant leading-relaxed">Asesoramiento experto y humano para encontrar la solución exacta a tu necesidad.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Human Element Section -->
-<section class="py-24 bg-white overflow-hidden">
-<div class="max-w-screen-2xl mx-auto px-8">
-<div class="flex flex-col md:flex-row gap-16 items-center">
-<div class="w-full md:w-1/2 space-y-8">
-<div class="inline-block bg-primary-fixed-dim/30 px-4 py-1 rounded-full text-primary font-bold text-xs uppercase tracking-widest font-body">El Equipo Movicare</div>
-<h2 class="font-headline text-4xl font-extrabold text-primary leading-tight">Profesionales dedicados a tu bienestar integral</h2>
-<p class="font-body text-lg text-on-surface-variant italic">"Nuestra mayor satisfacción es ver a un paciente recuperar su independencia y alegría de vivir a través de la movilidad."</p>
-<div class="grid grid-cols-2 gap-8">
-<div>
-<div class="text-4xl font-headline font-bold text-secondary">100%</div>
-<div class="text-sm font-medium text-on-surface-variant font-body">Atención personalizada</div>
-</div>
-<div>
-<div class="text-4xl font-headline font-bold text-secondary">5k+</div>
-<div class="text-sm font-medium text-on-surface-variant font-body">Pacientes asistidos</div>
-</div>
-</div>
-</div>
-<div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
-<img alt="Friendly Staff" class="rounded-xl w-full h-64 object-cover" data-alt="Professional smiling female doctor in white lab coat in a bright clinic setting, soft warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqCw_1lvdHe2Z3eEh5KWKDzI6Uf2cwcH_OJYmt4uyA0tqGXULqa0GBNquNxTaVDGsDKutoqXV1zOrDhKaKFAiM0cIaxZYVezPApwqRE4n17-8YpNkYXFrCxbbagVfi0qulSsuxAJmSToiNG28PAcD4EwlA-f_17ixQw6AHtj51f49GqjwVbcM_0hleZf0qxAJ8VddY-T0xX-jbFAUdA9kS55ZWdvnS0TQ3NB3FhCNuAMMFIc-MUi--jkz7izb-nhUvz-bG9fxSpYI"/>
-<img alt="Modern equipment" class="rounded-xl w-full h-80 object-cover mt-8" data-alt="Modern healthcare facility with advanced diagnostic equipment and clean professional aesthetics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfh1Pz2c-dk1MMeGGuU5dLOBiyHQIvwRWoQW4bhznRDgsrKnFia7yTSO8AZO7mVKtZx1cEX9iMoJd1MDbuwNGZnCTUP1dlPDwU9Ioj5XV_uC4pEdTAhxvtZ5S32cd4cb_A_HaYC2XXmQQyzeY2kOsupAgGEIzeCn2yeyvP9t491xDuUZ7WZvnVmsKIYO8sJZvmin2_HDtqb61jAt-yQ8o8_ntxVfr4mJTrtyN487knwnMfWvORBgh5AGFmTfXhjjAUjyM5X0_z6yw"/>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Floating WhatsApp Button -->
-<a class="fixed bottom-24 right-6 md:bottom-8 md:right-8 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all z-40" href="https://wa.me/8494495398" target="_blank">
-    <svg fill="currentColor" height="32" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.185-.573c.948.517 1.871.887 3.134.887 3.181 0 5.767-2.586 5.767-5.766 0-3.18-2.587-5.729-5.755-5.729zm3.844 8.839c-.152.427-.75.786-1.042.844-.241.05-.55.061-.865-.042-.204-.067-.476-.146-1.012-.369-1.395-.581-2.29-2.113-2.36-2.204-.07-.092-.563-.748-.563-1.428 0-.68.354-1.012.479-1.148.125-.135.271-.169.354-.169.083 0 .166 0 .249.006.088.003.204-.033.318.241.115.274.394.957.427 1.025.033.068.053.146.01.231-.042.085-.062.138-.125.212-.062.074-.131.165-.187.221-.063.063-.129.131-.056.257.073.125.324.536.696.867.48.427.883.56 1.012.624.128.062.204.053.28-.033.076-.088.324-.378.41-.508.087-.13.174-.109.294-.065.118.044.75.354.878.418.128.065.214.095.244.152.031.057.031.328-.121.755z"></path>
-    </svg>
-</a>
-<!-- BottomNavBar (Mobile Only) -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-2 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50 rounded-t-2xl">
-    <a class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all" href="index.html">
+  </head>
+  <body class="bg-surface font-body text-on-surface antialiased">
+    <!-- Top Navigation -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm transition-all duration-300"
+    >
+      <div
+        class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto w-full"
+      >
+        <a class="flex items-center" href="index.html">
+          <img src="logo.svg" alt="Movicare Logo" class="h-10 w-auto" />
+        </a>
+        <!-- Desktop Links -->
+        <div class="hidden md:flex gap-8 items-center">
+          <a
+            class="font-headline text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300"
+            href="index.html"
+            >Inicio</a
+          >
+          <a
+            class="font-headline text-sm font-semibold tracking-tight text-[#025960] border-b-2 border-[#E1AB6B] pb-1 hover:text-[#E1AB6B] transition-colors duration-300"
+            href="quienes_somos.html"
+            >Quiénes somos</a
+          >
+          <a
+            class="font-headline text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300"
+            href="tienda.html"
+            >Tienda</a
+          >
+          <a
+            class="font-headline text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300"
+            href="contacto.html"
+            >Contacto</a
+          >
+          <a
+            class="font-headline text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-300 hover:text-[#E1AB6B] transition-colors duration-300"
+            href="faqs.html"
+            >FAQs</a
+          >
+        </div>
+        <div class="flex items-center gap-4">
+          <button
+            class="text-[#025960] dark:text-teal-400 active:scale-95 transition-transform"
+          >
+            <i data-lucide="search" class="w-5 h-5"></i>
+          </button>
+          <button
+            class="text-[#025960] dark:text-teal-400 active:scale-95 transition-transform"
+          >
+            <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+          </button>
+          <button
+            class="text-[#025960] dark:text-teal-400 active:scale-95 transition-transform"
+          >
+            <i data-lucide="user" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+      <div
+        class="bg-gradient-to-b from-slate-100 to-transparent dark:from-slate-800 h-[1px]"
+      ></div>
+    </nav>
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <header class="relative h-[614px] flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <img
+            alt="Calm medical environment"
+            class="w-full h-full object-cover"
+            data-alt="Modern bright medical clinic interior with soft natural light, minimalist design, and lush indoor plants for a calming atmosphere"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVtt5DOn1ZnJRvNN6qxcyOw5Kkw23okOB6b-kraqOms7LNWAIxiVS9CxejNQyRBtiNcFDVRJ7PJU_TM3Nz-D9V0hLy6dGK0shSeEe77Zl1vKjxNw9EzzLH9sQGCoHS8Rz0TQnef_U_MKACNr-2oxJqafUnFENWbrhuFphPBBQTSIBQ6tr1z_OQjLN-HLoj23GlyH2mrJ0oT8bN6ClKa22ofCtE5TNLgtj0WgI_yyapwcNOd0i5iz6GwSkWeXwD_zSrWhMxtnLr9zI"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/20"
+          ></div>
+        </div>
+        <div class="relative z-10 max-w-screen-2xl mx-auto px-8 w-full">
+          <h1
+            class="font-headline text-5xl md:text-7xl font-extrabold text-white max-w-2xl leading-tight"
+          >
+            Nuestra Misión:
+            <span class="text-secondary-container">Tu Movilidad</span>
+          </h1>
+          <p class="mt-6 text-xl text-white/90 max-w-xl font-medium font-body">
+            Redefiniendo el cuidado ortopédico con un toque humano y
+            profesional.
+          </p>
+        </div>
+      </header>
+      <!-- Mission Content Section -->
+      <section class="py-24 bg-surface overflow-hidden">
+        <div class="max-w-screen-2xl mx-auto px-8">
+          <div class="flex flex-col lg:flex-row items-center gap-16">
+            <!-- Image Side -->
+            <div class="w-full lg:w-1/2 relative" data-aos="fade-right">
+              <!-- Decorative background shape -->
+              <div
+                class="absolute -top-12 -left-12 w-64 h-64 bg-primary/5 rounded-full blur-3xl"
+              ></div>
+
+              <div class="relative z-10 group">
+                <div
+                  class="rounded-[2.5rem] overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-[1.01] bg-slate-100"
+                >
+                  <img
+                    alt="Excelencia Ortopédica Movicare"
+                    class="w-full h-[600px] object-cover"
+                    src="https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?q=80&w=2048&auto=format&fit=crop"
+                  />
+                  <!-- Experience Badge (Glassmorphism) -->
+                  <div class="absolute bottom-8 left-8 right-8">
+                    <div
+                      class="backdrop-blur-md bg-white/20 border border-white/30 p-6 rounded-2xl flex items-center gap-5 shadow-xl"
+                    >
+                      <div
+                        class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center text-white shadow-lg shrink-0"
+                      >
+                        <i data-lucide="award" class="w-8 h-8"></i>
+                      </div>
+                      <div>
+                        <div class="font-headline font-black text-white text-2xl">
+                          +15 Años
+                        </div>
+                        <div
+                          class="text-white/90 text-sm font-medium font-body uppercase tracking-wider"
+                        >
+                          Liderando tu bienestar
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Content Side -->
+            <div class="w-full lg:w-1/2" data-aos="fade-left">
+              <div class="lg:pl-8">
+                <div
+                  class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container/30 text-secondary font-bold text-xs uppercase tracking-widest mb-6 font-body"
+                >
+                  <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                  Compromiso Movicare
+                </div>
+
+                <h2
+                  class="font-headline text-4xl md:text-5xl font-extrabold text-primary mb-8 leading-tight"
+                >
+                  Más que Insumos, <br />
+                  <span class="text-secondary">Soluciones de Vida</span>
+                </h2>
+
+                <div class="space-y-8 text-on-surface-variant font-body">
+                  <p class="text-lg leading-relaxed">
+                    En
+                    <span
+                      class="font-bold text-primary border-b-2 border-secondary/30"
+                      >Movicare</span
+                    >
+                    entendemos que la movilidad es libertad. Por eso,
+                    seleccionamos cuidadosamente cada dispositivo para asegurar
+                    no solo el cumplimiento técnico, sino una mejora real en tu
+                    calidad de vida diaria.
+                  </p>
+
+                  <!-- Feature Grid -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div
+                      class="flex items-center gap-4 p-4 rounded-2xl bg-white shadow-sm border border-slate-100 hover:border-secondary/20 hover:shadow-md transition-all"
+                    >
+                      <div
+                        class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary"
+                      >
+                        <i data-lucide="check-circle" class="w-5 h-5"></i>
+                      </div>
+                      <span class="font-bold text-primary">Calidad Clínica</span>
+                    </div>
+                    <div
+                      class="flex items-center gap-4 p-4 rounded-2xl bg-white shadow-sm border border-slate-100 hover:border-secondary/20 hover:shadow-md transition-all"
+                    >
+                      <div
+                        class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary"
+                      >
+                        <i data-lucide="users" class="w-5 h-5"></i>
+                      </div>
+                      <span class="font-bold text-primary">Trato Humano</span>
+                    </div>
+                    <div
+                      class="flex items-center gap-4 p-4 rounded-2xl bg-white shadow-sm border border-slate-100 hover:border-secondary/20 hover:shadow-md transition-all"
+                    >
+                      <div
+                        class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary"
+                      >
+                        <i data-lucide="shield-check" class="w-5 h-5"></i>
+                      </div>
+                      <span class="font-bold text-primary">Garantía Total</span>
+                    </div>
+                    <div
+                      class="flex items-center gap-4 p-4 rounded-2xl bg-white shadow-sm border border-slate-100 hover:border-secondary/20 hover:shadow-md transition-all"
+                    >
+                      <div
+                        class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary"
+                      >
+                        <i data-lucide="zap" class="w-5 h-5"></i>
+                      </div>
+                      <span class="font-bold text-primary">Asesoría Ágil</span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="p-6 rounded-2xl bg-primary-fixed-dim/10 border-l-4 border-secondary"
+                  >
+                    <p class="text-primary font-medium italic">
+                      "Nuestra misión termina cuando logras tu primer paso con
+                      total confianza."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Values Section - Bento Grid -->
+      <section class="py-24 bg-surface-container-low">
+        <div class="max-w-screen-2xl mx-auto px-8">
+          <div class="text-center mb-16">
+            <h2 class="font-headline text-4xl font-bold text-primary mb-4">
+              Nuestros Valores Fundamentales
+            </h2>
+            <p class="font-body text-on-surface-variant max-w-2xl mx-auto">
+              Los pilares que sostienen cada una de nuestras interacciones y
+              procesos de calidad.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <!-- Trust -->
+            <div
+              class="bg-surface-container-lowest p-8 rounded-xl hover:shadow-xl transition-shadow border border-white/50"
+            >
+              <div
+                class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+              >
+                <i data-lucide="shield-check" class="w-8 h-8 text-primary"></i>
+              </div>
+              <h3 class="font-headline text-xl font-bold text-primary mb-3">
+                Confianza
+              </h3>
+              <p
+                class="font-body text-sm text-on-surface-variant leading-relaxed"
+              >
+                Transparencia absoluta en cada producto y recomendación técnica
+                para tu seguridad.
+              </p>
+            </div>
+            <!-- Accessibility -->
+            <div
+              class="bg-surface-container-lowest p-8 rounded-xl hover:shadow-xl transition-shadow border border-white/50"
+            >
+              <div
+                class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center mb-6"
+              >
+                <i data-lucide="banknote" class="w-8 h-8 text-secondary"></i>
+              </div>
+              <h3 class="font-headline text-xl font-bold text-primary mb-3">
+                Accesibilidad
+              </h3>
+              <p
+                class="font-body text-sm text-on-surface-variant leading-relaxed"
+              >
+                Soluciones de alta calidad diseñadas para ser accesibles a toda
+                la comunidad.
+              </p>
+            </div>
+            <!-- Quality -->
+            <div
+              class="bg-surface-container-lowest p-8 rounded-xl hover:shadow-xl transition-shadow border border-white/50"
+            >
+              <div
+                class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+              >
+                <i data-lucide="award" class="w-8 h-8 text-primary"></i>
+              </div>
+              <h3 class="font-headline text-xl font-bold text-primary mb-3">
+                Calidad
+              </h3>
+              <p
+                class="font-body text-sm text-on-surface-variant leading-relaxed"
+              >
+                Certificación internacional en todos nuestros insumos y equipos
+                ortopédicos.
+              </p>
+            </div>
+            <!-- Personal Attention -->
+            <div
+              class="bg-surface-container-lowest p-8 rounded-xl hover:shadow-xl transition-shadow border border-white/50"
+            >
+              <div
+                class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center mb-6"
+              >
+                <i data-lucide="headset" class="w-8 h-8 text-secondary"></i>
+              </div>
+              <h3 class="font-headline text-xl font-bold text-primary mb-3">
+                Atención Personal
+              </h3>
+              <p
+                class="font-body text-sm text-on-surface-variant leading-relaxed"
+              >
+                Asesoramiento experto y humano para encontrar la solución exacta
+                a tu necesidad.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Human Element Section -->
+      <section class="py-24 bg-white overflow-hidden">
+        <div class="max-w-screen-2xl mx-auto px-8">
+          <div class="flex flex-col md:flex-row gap-16 items-center">
+            <div class="w-full md:w-1/2 space-y-8">
+              <div
+                class="inline-block bg-primary-fixed-dim/30 px-4 py-1 rounded-full text-primary font-bold text-xs uppercase tracking-widest font-body"
+              >
+                El Equipo Movicare
+              </div>
+              <h2
+                class="font-headline text-4xl font-extrabold text-primary leading-tight"
+              >
+                Profesionales dedicados a tu bienestar integral
+              </h2>
+              <p class="font-body text-lg text-on-surface-variant italic">
+                "Nuestra mayor satisfacción es ver a un paciente recuperar su
+                independencia y alegría de vivir a través de la movilidad."
+              </p>
+              <div class="grid grid-cols-2 gap-8">
+                <div>
+                  <div class="text-4xl font-headline font-bold text-secondary">
+                    100%
+                  </div>
+                  <div
+                    class="text-sm font-medium text-on-surface-variant font-body"
+                  >
+                    Atención personalizada
+                  </div>
+                </div>
+                <div>
+                  <div class="text-4xl font-headline font-bold text-secondary">
+                    5k+
+                  </div>
+                  <div
+                    class="text-sm font-medium text-on-surface-variant font-body"
+                  >
+                    Pacientes asistidos
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2">
+              <img
+                alt="Friendly Staff"
+                class="rounded-xl w-full h-[400px] object-cover shadow-2xl"
+                data-alt="Professional smiling female doctor in white lab coat in a bright clinic setting, soft warm lighting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqCw_1lvdHe2Z3eEh5KWKDzI6Uf2cwcH_OJYmt4uyA0tqGXULqa0GBNquNxTaVDGsDKutoqXV1zOrDhKaKFAiM0cIaxZYVezPApwqRE4n17-8YpNkYXFrCxbbagVfi0qulSsuxAJmSToiNG28PAcD4EwlA-f_17ixQw6AHtj51f49GqjwVbcM_0hleZf0qxAJ8VddY-T0xX-jbFAUdA9kS55ZWdvnS0TQ3NB3FhCNuAMMFIc-MUi--jkz7izb-nhUvz-bG9fxSpYI"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav
+      class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-2 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50 rounded-t-2xl"
+    >
+      <a
+        class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all"
+        href="index.html"
+      >
         <i data-lucide="home" class="w-5 h-5"></i>
         <span class="font-body text-[10px] font-medium">Inicio</span>
-    </a>
-    <a class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all" href="tienda.html">
+      </a>
+      <a
+        class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all"
+        href="tienda.html"
+      >
         <i data-lucide="store" class="w-5 h-5"></i>
         <span class="font-body text-[10px] font-medium">Tienda</span>
-    </a>
-    <a class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all" href="registro.html">
+      </a>
+      <a
+        class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all"
+        href="registro.html"
+      >
         <i data-lucide="user" class="w-5 h-5"></i>
         <span class="font-body text-[10px] font-medium">Cuenta</span>
-    </a>
-    <a class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all" href="contacto.html">
+      </a>
+      <a
+        class="flex flex-col items-center justify-center text-slate-400 active:scale-90 transition-all"
+        href="contacto.html"
+      >
         <i data-lucide="message-square" class="w-5 h-5"></i>
         <span class="font-body text-[10px] font-medium">Contacto</span>
-    </a>
-</nav>
-<!-- Footer -->
-<footer class="w-full pt-16 pb-8 bg-[#025960] dark:bg-slate-950 text-white mt-12">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-screen-2xl mx-auto w-full">
+      </a>
+    </nav>
+    <!-- Footer -->
+    <footer
+      class="w-full pt-16 pb-8 bg-[#025960] dark:bg-slate-950 text-white mt-12"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-screen-2xl mx-auto w-full"
+      >
         <div class="md:col-span-1">
-            <img src="logo.svg" alt="Movicare Logo" class="h-12 w-auto brightness-0 invert">
-            <p class="mt-4 text-slate-200/80 font-body text-sm leading-relaxed">
-                Excelencia en insumos ortopédicos para tu bienestar y movilidad diaria. Calidad clínica con toque humano.
-            </p>
+          <img
+            src="logo.svg"
+            alt="Movicare Logo"
+            class="h-12 w-auto brightness-0 invert"
+          />
+          <p class="mt-4 text-slate-200/80 font-body text-sm leading-relaxed">
+            Excelencia en insumos ortopédicos para tu bienestar y movilidad
+            diaria. Calidad clínica con toque humano.
+          </p>
         </div>
         <div>
-            <h4 class="font-headline font-bold mb-6 text-[#E1AB6B]">Enlaces Rápidos</h4>
-            <ul class="space-y-4">
-                <li><a class="font-body text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="index.html">Inicio</a></li>
-                <li><a class="font-body text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="quienes_somos.html">Quiénes somos</a></li>
-                <li><a class="font-body text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="tienda.html">Tienda</a></li>
-            </ul>
+          <h4 class="font-headline font-bold mb-6 text-[#E1AB6B]">
+            Enlaces Rápidos
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="font-body text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm"
+                href="index.html"
+                >Inicio</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm"
+                href="quienes_somos.html"
+                >Quiénes somos</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm"
+                href="tienda.html"
+                >Tienda</a
+              >
+            </li>
+          </ul>
         </div>
         <div>
-            <h4 class="font-headline font-bold mb-6 text-[#E1AB6B]">Asistencia</h4>
-            <ul class="space-y-4">
-                <li><a class="font-body text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="faqs.html">FAQs</a></li>
-                <li><a class="font-body text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="privacidad.html">Privacidad</a></li>
-                <li><a class="font-body text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm" href="terminos_condiciones.html">Términos</a></li>
-            </ul>
+          <h4 class="font-headline font-bold mb-6 text-[#E1AB6B]">
+            Asistencia
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="font-body text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm"
+                href="faqs.html"
+                >FAQs</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm"
+                href="privacidad.html"
+                >Privacidad</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body text-slate-200/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm"
+                href="terminos_condiciones.html"
+                >Términos</a
+              >
+            </li>
+          </ul>
         </div>
         <div>
-            <h4 class="font-headline font-bold mb-6 text-[#E1AB6B]">Newsletter</h4>
-            <p class="font-body text-sm text-slate-200/80 mb-4">Suscríbete para recibir consejos de salud y ofertas exclusivas.</p>
-            <div class="flex gap-2">
-                <input class="bg-white/10 border-none rounded-lg px-4 py-2 text-white w-full text-sm focus:ring-1 focus:ring-[#E1AB6B] font-body" placeholder="Tu correo" type="email"/>
-                <button class="bg-[#E1AB6B] text-[#025960] px-4 py-2 rounded-lg font-bold hover:bg-[#d09a5a] transition-colors">
-                    <i data-lucide="send" class="w-5 h-5"></i>
-                </button>
-            </div>
+          <h4 class="font-headline font-bold mb-6 text-[#E1AB6B]">
+            Newsletter
+          </h4>
+          <p class="font-body text-sm text-slate-200/80 mb-4">
+            Suscríbete para recibir consejos de salud y ofertas exclusivas.
+          </p>
+          <div class="flex gap-2">
+            <input
+              class="bg-white/10 border-none rounded-lg px-4 py-2 text-white w-full text-sm focus:ring-1 focus:ring-[#E1AB6B] font-body"
+              placeholder="Tu correo"
+              type="email"
+            />
+            <button
+              class="bg-[#E1AB6B] text-[#025960] px-4 py-2 rounded-lg font-bold hover:bg-[#d09a5a] transition-colors"
+            >
+              <i data-lucide="send" class="w-5 h-5"></i>
+            </button>
+          </div>
         </div>
-    </div>
-    <div class="mt-16 pt-8 border-t border-white/10 text-center text-xs text-slate-200/60 font-body">
+      </div>
+      <div
+        class="mt-16 pt-8 border-t border-white/10 text-center text-xs text-slate-200/60 font-body"
+      >
         © 2024 Movicare Orthopedic Supplies. Todos los derechos reservados.
-    </div>
-</footer>
-<script>lucide.createIcons();</script>
-</body></html>
+      </div>
+    </footer>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
